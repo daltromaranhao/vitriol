@@ -1,5 +1,5 @@
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n';
 import { ThemeProvider } from '@/providers/theme-provider';
@@ -7,6 +7,16 @@ import '../globals.css';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({ params }: {params: Promise<{ locale: string }>}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'common' });
+  
+  return {
+    title: 'Vitriol - Global Brotherhood',
+    description: t('description') || 'Global network connecting professionals worldwide',
+  };
 }
 
 type Props = {
@@ -22,8 +32,11 @@ export default async function LocaleLayout({ children, params }: Props) {
     notFound();
   }
 
-  // Fetch messages for the locale - need to pass locale explicitly
-  const messages = await getMessages({ locale });
+  // Enable static rendering
+  setRequestLocale(locale);
+
+  // Fetch messages for the locale
+  const messages = await getMessages();
 
   return (
     <html lang={locale} suppressHydrationWarning>
