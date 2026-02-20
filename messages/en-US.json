@@ -61,11 +61,13 @@
       "description": "More than just networking—Vitriol is a global support system. When members face challenges, whether medical emergencies, professional needs, or urgent situations, the brotherhood responds.",
       "medical": {
         "title": "Medical Support",
-        "description": "Connect with healthcare professionals and get recommendations in any region"
+        "description": "Connect with healthcare professionals and get recommendations in any region",
+        "subtitle": "Healthcare support"
       },
       "professional": {
         "title": "Professional Assistance",
-        "description": "Access expertise, mentorship, and business support from members worldwide"
+        "description": "Access expertise, mentorship, and business support from members worldwide",
+        "subtitle": "Business assistance"
       },
       "global": {
         "title": "Global Response",
@@ -78,6 +80,16 @@
         "responseLabel": "Avg Response",
         "helped": "156",
         "helpedLabel": "Helped/Month"
+      },
+      "tagline": "Verified, reviewed, and secure",
+      "systemDescription": "Our Help Request system allows members to seek assistance in critical situations. Every request is reviewed by administrators to ensure authenticity and prevent abuse.",
+      "legal": {
+        "title": "Legal",
+        "subtitle": "Legal guidance"
+      },
+      "travel": {
+        "title": "Travel",
+        "subtitle": "Travel support"
       }
     },
     "testimonials": {

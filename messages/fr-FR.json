@@ -61,11 +61,13 @@
       "description": "Plus qu'un simple réseau—Vitriol est un système de soutien mondial. Lorsque les membres font face à des défis, qu'il s'agisse d'urgences médicales, de besoins professionnels ou de situations urgentes, la fraternité répond.",
       "medical": {
         "title": "Soutien Médical",
-        "description": "Connectez-vous avec des professionnels de la santé et obtenez des recommandations dans n'importe quelle région"
+        "description": "Connectez-vous avec des professionnels de la santé et obtenez des recommandations dans n'importe quelle région",
+        "subtitle": "Soutien médical"
       },
       "professional": {
         "title": "Assistance Professionnelle",
-        "description": "Accédez à l'expertise, au mentorat et au soutien commercial des membres du monde entier"
+        "description": "Accédez à l'expertise, au mentorat et au soutien commercial des membres du monde entier",
+        "subtitle": "Aide aux entreprises"
       },
       "global": {
         "title": "Réponse Mondiale",
@@ -78,6 +80,16 @@
         "responseLabel": "Réponse Moyenne",
         "helped": "156",
         "helpedLabel": "Aidés/Mois"
+      },
+      "tagline": "Vérifié, examiné et sécurisé",
+      "systemDescription": "Notre système de Demandes d'Aide permet aux membres de chercher de l'assistance dans des situations critiques. Chaque demande est examinée par des administrateurs pour garantir l'authenticité et prévenir les abus.",
+      "legal": {
+        "title": "Juridique",
+        "subtitle": "Conseils juridiques"
+      },
+      "travel": {
+        "title": "Voyage",
+        "subtitle": "Assistance voyage"
       }
     },
     "testimonials": {

@@ -222,28 +222,28 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                   </div>
                   <div>
                     <h3 className="text-2xl">{tNav('helpRequests')}</h3>
-                    <p className="text-muted-foreground">Verified, reviewed, and secure</p>
+                    <p className="text-muted-foreground">{t('help.tagline')}</p>
                   </div>
                 </div>
                 <p className="text-muted-foreground">
-                  Our Help Request system allows members to seek assistance in critical situations. Every request is reviewed by administrators to ensure authenticity and prevent abuse.
+                  {t('help.systemDescription')}
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="p-4 rounded-lg bg-card">
                     <div className="text-lg font-bold text-accent">{t('help.medical.title')}</div>
-                    <div className="text-sm text-muted-foreground">Healthcare support</div>
+                    <div className="text-sm text-muted-foreground">{t('help.medical.subtitle')}</div>
                   </div>
                   <div className="p-4 rounded-lg bg-card">
                     <div className="text-lg font-bold text-accent">{t('help.professional.title')}</div>
-                    <div className="text-sm text-muted-foreground">Business assistance</div>
+                    <div className="text-sm text-muted-foreground">{t('help.professional.subtitle')}</div>
                   </div>
                   <div className="p-4 rounded-lg bg-card">
-                    <div className="text-lg font-bold text-accent">Legal</div>
-                    <div className="text-sm text-muted-foreground">Legal guidance</div>
+                    <div className="text-lg font-bold text-accent">{t('help.legal.title')}</div>
+                    <div className="text-sm text-muted-foreground">{t('help.legal.subtitle')}</div>
                   </div>
                   <div className="p-4 rounded-lg bg-card">
-                    <div className="text-lg font-bold text-accent">Travel</div>
-                    <div className="text-sm text-muted-foreground">Travel support</div>
+                    <div className="text-lg font-bold text-accent">{t('help.travel.title')}</div>
+                    <div className="text-sm text-muted-foreground">{t('help.travel.subtitle')}</div>
                   </div>
                 </div>
                 <Link href={`/${locale}/auth/register`}>
