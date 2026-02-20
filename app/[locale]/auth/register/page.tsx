@@ -4,6 +4,7 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { FormEvent, useState } from "react";
+import { useTranslations, useLocale } from 'next-intl';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -12,6 +13,8 @@ import { User, Mail, Lock, ArrowRight } from "lucide-react";
 
 export default function RegisterPage() {
   const router = useRouter();
+  const t = useTranslations('auth');
+  const locale = useLocale();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -41,7 +44,7 @@ export default function RegisterPage() {
         return;
       }
 
-      router.push("/auth/login?registered=true");
+      router.push(`/${locale}/auth/login?registered=true`);
     } catch (error) {
       setError("Something went wrong");
       console.error(error);
@@ -66,7 +69,7 @@ export default function RegisterPage() {
 
         <Card className="border-border/50">
           <CardHeader>
-            <CardTitle>Sign Up</CardTitle>
+            <CardTitle>{t('signUp')}</CardTitle>
             <CardDescription>Create your account and join the network</CardDescription>
           </CardHeader>
           <CardContent>
@@ -85,7 +88,7 @@ export default function RegisterPage() {
                   <path fill="currentColor" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
                   <path fill="currentColor" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
                 </svg>
-                Continue with Google
+                {t('continueWithGoogle')}
               </Button>
               <Button 
                 variant="outline" 
@@ -97,7 +100,7 @@ export default function RegisterPage() {
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
                 </svg>
-                Continue with Apple
+                {t('continueWithApple')}
               </Button>
             </div>
 
@@ -106,7 +109,7 @@ export default function RegisterPage() {
                 <span className="w-full border-t border-border" />
               </div>
               <div className="relative flex justify-center text-xs uppercase">
-                <span className="bg-card px-2 text-muted-foreground">Or continue with email</span>
+                <span className="bg-card px-2 text-muted-foreground">{t('orContinueWith')}</span>
               </div>
             </div>
 
@@ -119,7 +122,7 @@ export default function RegisterPage() {
 
               <div className="space-y-2">
                 <label htmlFor="name" className="text-sm font-medium">
-                  Full Name
+                  {t('name')}
                 </label>
                 <div className="relative">
                   <User className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
@@ -136,7 +139,7 @@ export default function RegisterPage() {
 
               <div className="space-y-2">
                 <label htmlFor="email" className="text-sm font-medium">
-                  Email
+                  {t('email')}
                 </label>
                 <div className="relative">
                   <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
@@ -153,7 +156,7 @@ export default function RegisterPage() {
 
               <div className="space-y-2">
                 <label htmlFor="password" className="text-sm font-medium">
-                  Password
+                  {t('password')}
                 </label>
                 <div className="relative">
                   <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
@@ -178,15 +181,15 @@ export default function RegisterPage() {
                 variant="accent"
                 className="w-full gap-2"
               >
-                {loading ? "Creating account..." : "Sign Up"}
+                {loading ? "..." : t('signUp')}
                 <ArrowRight className="w-4 h-4" />
               </Button>
             </form>
 
             <div className="mt-6 text-center text-sm">
-              <span className="text-muted-foreground">Already have an account? </span>
-              <Link href="/auth/login" className="font-medium text-accent hover:underline">
-                Sign In
+              <span className="text-muted-foreground">{t('haveAccount')} </span>
+              <Link href={`/${locale}/auth/login`} className="font-medium text-accent hover:underline">
+                {t('signIn')}
               </Link>
             </div>
           </CardContent>

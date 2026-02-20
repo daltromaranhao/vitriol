@@ -10,35 +10,43 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Navbar } from "@/components/navbar";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
-export default function Home() {
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  
+  const t = await getTranslations('landing');
+  const tNav = await getTranslations('nav');
+  const tFooter = await getTranslations('footer');
+
   const features = [
     {
       icon: Globe,
-      title: "Global Reach",
-      description: "Connect with members in over 150 countries",
+      title: t('features.global.title'),
+      description: t('features.global.description'),
     },
     {
       icon: ShieldCheck,
-      title: "Verified Members",
-      description: "Trust-based community with verified profiles",
+      title: t('features.verified.title'),
+      description: t('features.verified.description'),
     },
     {
       icon: Briefcase,
-      title: "Professional Network",
-      description: "Build meaningful business relationships",
+      title: t('features.professional.title'),
+      description: t('features.professional.description'),
     },
     {
       icon: Lock,
-      title: "Private & Secure",
-      description: "Your data and connections remain confidential",
+      title: t('features.private.title'),
+      description: t('features.private.description'),
     },
   ];
 
   const stats = [
-    { value: "150+", label: "Countries" },
-    { value: "50K+", label: "Members" },
-    { value: "98%", label: "Verified" },
+    { value: t('stats.countries'), label: t('stats.countriesLabel') },
+    { value: t('stats.members'), label: t('stats.membersLabel') },
+    { value: t('stats.verified'), label: t('stats.verifiedLabel') },
   ];
 
   const testimonials = [
@@ -74,23 +82,23 @@ export default function Home() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-5xl lg:text-6xl tracking-tight">
-                  Vitriol
+                  {t('hero.title')}
                 </h1>
-                <p className="text-xl text-accent">Global Brotherhood</p>
+                <p className="text-xl text-accent">{t('hero.subtitle')}</p>
                 <p className="text-lg text-muted-foreground max-w-xl">
-                  Connect with trusted professionals worldwide. Build meaningful relationships across borders.
+                  {t('hero.tagline')}
                 </p>
               </div>
               <div className="flex flex-wrap gap-4">
-                <Link href="/auth/register">
+                <Link href={`/${locale}/auth/register`}>
                   <Button variant="accent" size="lg" className="gap-2">
-                    Join the Network
+                    {t('hero.cta')}
                     <ArrowRight className="w-5 h-5" />
                   </Button>
                 </Link>
-                <Link href="/auth/login">
+                <Link href={`/${locale}/auth/login`}>
                   <Button variant="outline" size="lg">
-                    Sign In
+                    {t('hero.login')}
                   </Button>
                 </Link>
               </div>
@@ -117,9 +125,9 @@ export default function Home() {
       <section className="py-24 bg-card/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl mb-4">A Premium Global Network</h2>
+            <h2 className="text-4xl mb-4">{t('features.title')}</h2>
             <p className="text-lg text-muted-foreground">
-              Connect, collaborate, and grow with verified members worldwide
+              {t('features.subtitle')}
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -148,11 +156,11 @@ export default function Home() {
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent">
                 <HeartHandshake className="w-5 h-5" />
-                <span className="font-medium">Global Help Network</span>
+                <span className="font-medium">{t('help.title')}</span>
               </div>
-              <h2 className="text-4xl">Brotherhood in Action</h2>
+              <h2 className="text-4xl">{t('help.subtitle')}</h2>
               <p className="text-lg text-muted-foreground">
-                More than just networking—Vitriol is a global support system. When members face challenges, whether medical emergencies, professional needs, or urgent situations, the brotherhood responds.
+                {t('help.description')}
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -160,9 +168,9 @@ export default function Home() {
                     <HeartHandshake className="w-5 h-5 text-red-500" />
                   </div>
                   <div>
-                    <div className="font-medium">Medical Support</div>
+                    <div className="font-medium">{t('help.medical.title')}</div>
                     <div className="text-sm text-muted-foreground">
-                      Connect with healthcare professionals and get recommendations in any region
+                      {t('help.medical.description')}
                     </div>
                   </div>
                 </div>
@@ -171,9 +179,9 @@ export default function Home() {
                     <Briefcase className="w-5 h-5 text-blue-500" />
                   </div>
                   <div>
-                    <div className="font-medium">Professional Assistance</div>
+                    <div className="font-medium">{t('help.professional.title')}</div>
                     <div className="text-sm text-muted-foreground">
-                      Access expertise, mentorship, and business support from members worldwide
+                      {t('help.professional.description')}
                     </div>
                   </div>
                 </div>
@@ -182,9 +190,9 @@ export default function Home() {
                     <Globe className="w-5 h-5 text-green-500" />
                   </div>
                   <div>
-                    <div className="font-medium">Global Response</div>
+                    <div className="font-medium">{t('help.global.title')}</div>
                     <div className="text-sm text-muted-foreground">
-                      Members in 150+ countries ready to assist in emergencies and urgent situations
+                      {t('help.global.description')}
                     </div>
                   </div>
                 </div>
@@ -192,16 +200,16 @@ export default function Home() {
               <div className="pt-4">
                 <div className="flex items-center gap-6">
                   <div>
-                    <div className="text-2xl font-bold text-accent">24/7</div>
-                    <div className="text-sm text-muted-foreground">Global Coverage</div>
+                    <div className="text-2xl font-bold text-accent">{t('help.stats.coverage')}</div>
+                    <div className="text-sm text-muted-foreground">{t('help.stats.coverageLabel')}</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-accent">2.4h</div>
-                    <div className="text-sm text-muted-foreground">Avg Response</div>
+                    <div className="text-2xl font-bold text-accent">{t('help.stats.response')}</div>
+                    <div className="text-sm text-muted-foreground">{t('help.stats.responseLabel')}</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-accent">156</div>
-                    <div className="text-sm text-muted-foreground">Helped/Month</div>
+                    <div className="text-2xl font-bold text-accent">{t('help.stats.helped')}</div>
+                    <div className="text-sm text-muted-foreground">{t('help.stats.helpedLabel')}</div>
                   </div>
                 </div>
               </div>
@@ -213,7 +221,7 @@ export default function Home() {
                     <HeartHandshake className="w-8 h-8 text-accent" />
                   </div>
                   <div>
-                    <h3 className="text-2xl">Help Requests</h3>
+                    <h3 className="text-2xl">{tNav('helpRequests')}</h3>
                     <p className="text-muted-foreground">Verified, reviewed, and secure</p>
                   </div>
                 </div>
@@ -222,11 +230,11 @@ export default function Home() {
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="p-4 rounded-lg bg-card">
-                    <div className="text-lg font-bold text-accent">Medical</div>
+                    <div className="text-lg font-bold text-accent">{t('help.medical.title')}</div>
                     <div className="text-sm text-muted-foreground">Healthcare support</div>
                   </div>
                   <div className="p-4 rounded-lg bg-card">
-                    <div className="text-lg font-bold text-accent">Professional</div>
+                    <div className="text-lg font-bold text-accent">{t('help.professional.title')}</div>
                     <div className="text-sm text-muted-foreground">Business assistance</div>
                   </div>
                   <div className="p-4 rounded-lg bg-card">
@@ -238,9 +246,9 @@ export default function Home() {
                     <div className="text-sm text-muted-foreground">Travel support</div>
                   </div>
                 </div>
-                <Link href="/auth/register">
+                <Link href={`/${locale}/auth/register`}>
                   <Button variant="accent" className="w-full gap-2">
-                    Join to Access Help Network
+                    {t('hero.cta')}
                     <ArrowRight className="w-4 h-4" />
                   </Button>
                 </Link>
@@ -254,13 +262,13 @@ export default function Home() {
       <section className="py-24 bg-card/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl mb-4">Trusted by Leaders Worldwide</h2>
+            <h2 className="text-4xl mb-4">{t('testimonials.title')}</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial) => (
               <Card key={testimonial.name} className="p-6">
                 <CardContent className="p-0 space-y-4">
-                  <p className="text-muted-foreground italic">"{testimonial.content}"</p>
+                  <p className="text-muted-foreground italic">&ldquo;{testimonial.content}&rdquo;</p>
                   <div>
                     <p className="font-semibold">{testimonial.name}</p>
                     <p className="text-sm text-muted-foreground">{testimonial.role}</p>
@@ -279,14 +287,14 @@ export default function Home() {
           <Card className="bg-gradient-to-br from-primary/10 to-accent/10 border-border/50">
             <CardContent className="p-12 text-center">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-                Ready to Join?
+                {t('cta.title')}
               </h2>
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Become part of an exclusive global network
+                {t('cta.description')}
               </p>
-              <Link href="/auth/register">
+              <Link href={`/${locale}/auth/register`}>
                 <Button variant="accent" size="lg" className="gap-2">
-                  Get Started
+                  {t('cta.button')}
                   <ArrowRight className="w-5 h-5" />
                 </Button>
               </Link>
@@ -301,17 +309,17 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-3">
               <span className="text-lg font-semibold">Vitriol</span>
-              <span className="text-sm text-muted-foreground">© 2026 - Vitriol - Global Brotherhood</span>
+              <span className="text-sm text-muted-foreground">{tFooter('copyright')}</span>
             </div>
             <div className="flex gap-6 text-sm text-muted-foreground">
               <Link href="/about" className="hover:text-accent transition-colors">
-                About
+                {tFooter('about')}
               </Link>
               <Link href="/privacy" className="hover:text-accent transition-colors">
-                Privacy
+                {tFooter('privacy')}
               </Link>
               <Link href="/terms" className="hover:text-accent transition-colors">
-                Terms
+                {tFooter('terms')}
               </Link>
             </div>
           </div>
