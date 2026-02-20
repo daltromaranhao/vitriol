@@ -5,6 +5,7 @@ import {
   Briefcase,
   Lock,
   ArrowRight,
+  HeartHandshake,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -140,8 +141,117 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Global Help Network Section */}
       <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent">
+                <HeartHandshake className="w-5 h-5" />
+                <span className="font-medium">Global Help Network</span>
+              </div>
+              <h2 className="text-4xl">Brotherhood in Action</h2>
+              <p className="text-lg text-muted-foreground">
+                More than just networking—Vitriol is a global support system. When members face challenges, whether medical emergencies, professional needs, or urgent situations, the brotherhood responds.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-red-500/10 flex items-center justify-center flex-shrink-0">
+                    <HeartHandshake className="w-5 h-5 text-red-500" />
+                  </div>
+                  <div>
+                    <div className="font-medium">Medical Support</div>
+                    <div className="text-sm text-muted-foreground">
+                      Connect with healthcare professionals and get recommendations in any region
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0">
+                    <Briefcase className="w-5 h-5 text-blue-500" />
+                  </div>
+                  <div>
+                    <div className="font-medium">Professional Assistance</div>
+                    <div className="text-sm text-muted-foreground">
+                      Access expertise, mentorship, and business support from members worldwide
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center flex-shrink-0">
+                    <Globe className="w-5 h-5 text-green-500" />
+                  </div>
+                  <div>
+                    <div className="font-medium">Global Response</div>
+                    <div className="text-sm text-muted-foreground">
+                      Members in 150+ countries ready to assist in emergencies and urgent situations
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="pt-4">
+                <div className="flex items-center gap-6">
+                  <div>
+                    <div className="text-2xl font-bold text-accent">24/7</div>
+                    <div className="text-sm text-muted-foreground">Global Coverage</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-accent">2.4h</div>
+                    <div className="text-sm text-muted-foreground">Avg Response</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-accent">156</div>
+                    <div className="text-sm text-muted-foreground">Helped/Month</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <Card className="p-8 bg-gradient-to-br from-accent/5 to-primary/5 border-accent/20">
+              <CardContent className="p-0 space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 rounded-xl bg-accent/20 flex items-center justify-center">
+                    <HeartHandshake className="w-8 h-8 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl">Help Requests</h3>
+                    <p className="text-muted-foreground">Verified, reviewed, and secure</p>
+                  </div>
+                </div>
+                <p className="text-muted-foreground">
+                  Our Help Request system allows members to seek assistance in critical situations. Every request is reviewed by administrators to ensure authenticity and prevent abuse.
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="p-4 rounded-lg bg-card">
+                    <div className="text-lg font-bold text-accent">Medical</div>
+                    <div className="text-sm text-muted-foreground">Healthcare support</div>
+                  </div>
+                  <div className="p-4 rounded-lg bg-card">
+                    <div className="text-lg font-bold text-accent">Professional</div>
+                    <div className="text-sm text-muted-foreground">Business assistance</div>
+                  </div>
+                  <div className="p-4 rounded-lg bg-card">
+                    <div className="text-lg font-bold text-accent">Legal</div>
+                    <div className="text-sm text-muted-foreground">Legal guidance</div>
+                  </div>
+                  <div className="p-4 rounded-lg bg-card">
+                    <div className="text-lg font-bold text-accent">Travel</div>
+                    <div className="text-sm text-muted-foreground">Travel support</div>
+                  </div>
+                </div>
+                <Link href="/auth/register">
+                  <Button variant="accent" className="w-full gap-2">
+                    Join to Access Help Network
+                    <ArrowRight className="w-4 h-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-24 bg-card/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl mb-4">Trusted by Leaders Worldwide</h2>
@@ -164,7 +274,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-card/30">
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="bg-gradient-to-br from-primary/10 to-accent/10 border-border/50">
             <CardContent className="p-12 text-center">
