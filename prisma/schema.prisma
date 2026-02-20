@@ -96,6 +96,8 @@ model Profile {
   bio                String?
   country            String?
   city               String?
+  timezone           String?            // IANA timezone (e.g., "America/Sao_Paulo")
+  locale             String?            // User's preferred locale (e.g., "pt-BR")
   profession         String?
   interests          String[]
   verificationStatus VerificationStatus @default(UNVERIFIED)

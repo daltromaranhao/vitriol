@@ -30,7 +30,7 @@ export default async function middleware(request: NextRequest) {
 
   // Get the pathname without locale prefix
   const pathname = request.nextUrl.pathname;
-  const pathnameWithoutLocale = pathname.replace(/^\/(en|pt|es|fr)/, '') || '/';
+  const pathnameWithoutLocale = pathname.replace(/^\/(en-US|pt-BR|es-ES|fr-FR)/, '') || '/';
 
   // Check if the route is protected
   const isProtectedRoute = protectedRoutes.some((route) =>
@@ -42,7 +42,7 @@ export default async function middleware(request: NextRequest) {
     const session = await auth();
     
     if (!session?.user) {
-      const locale = pathname.match(/^\/(en|pt|es|fr)/)?.[1] || defaultLocale;
+      const locale = pathname.match(/^\/(en-US|pt-BR|es-ES|fr-FR)/)?.[1] || defaultLocale;
       const loginUrl = new URL(`/${locale}/auth/login`, request.url);
       loginUrl.searchParams.set('callbackUrl', pathname);
       return NextResponse.redirect(loginUrl);

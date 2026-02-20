@@ -7,10 +7,10 @@ import { Button } from "./ui/button";
 import { useState, useTransition } from "react";
 
 const languages = [
-  { code: 'en', name: 'English', flag: '🇺🇸' },
-  { code: 'pt', name: 'Português', flag: '🇧🇷' },
-  { code: 'es', name: 'Español', flag: '🇪🇸' },
-  { code: 'fr', name: 'Français', flag: '🇫🇷' },
+  { code: 'en-US', name: 'English', flag: '🇺🇸' },
+  { code: 'pt-BR', name: 'Português', flag: '🇧🇷' },
+  { code: 'es-ES', name: 'Español', flag: '🇪🇸' },
+  { code: 'fr-FR', name: 'Français', flag: '🇫🇷' },
 ] as const;
 
 export function LanguageSwitcher() {
@@ -24,10 +24,8 @@ export function LanguageSwitcher() {
 
   const switchLanguage = (newLocale: string) => {
     // Remove current locale from pathname if it exists
-    const pathnameWithoutLocale = pathname.replace(/^\/(en|pt|es|fr)/, '');
-    const newPath = newLocale === 'en' 
-      ? pathnameWithoutLocale || '/'
-      : `/${newLocale}${pathnameWithoutLocale || '/'}`;
+    const pathnameWithoutLocale = pathname.replace(/^\/(en-US|pt-BR|es-ES|fr-FR)/, '');
+    const newPath = `/${newLocale}${pathnameWithoutLocale || '/'}`;
 
     startTransition(() => {
       router.push(newPath);
