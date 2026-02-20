@@ -260,5 +260,154 @@
     "privacy": "Confidentialité",
     "terms": "Conditions",
     "contact": "Contact"
+  },
+  "about": {
+    "title": "À Propos de Vitriol",
+    "subtitle": "Construire des ponts entre frères du monde entier depuis 2024.",
+    "mission": {
+      "title": "Notre Mission",
+      "description": "Vitriol existe pour connecter des hommes de caractère exceptionnel sur tous les continents, créant un réseau mondial de confiance, de soutien mutuel et de fraternité genuine qui transcende les frontières géographiques et culturelles."
+    },
+    "vision": {
+      "title": "Vision",
+      "description": "Être la plateforme de réseautage la plus fiable et exclusive au monde, où chaque membre contribue son expertise unique pour renforcer la fraternité mondiale."
+    },
+    "purpose": {
+      "title": "Objectif",
+      "description": "Faciliter des connexions significatives, soutenir les membres dans des situations critiques et cultiver un environnement de croissance personnelle et professionnelle entre pairs de confiance."
+    },
+    "story": {
+      "title": "Notre Histoire",
+      "p1": "Vitriol est né du besoin de créer un espace exclusif où des hommes de différents pays et cultures pouvaient se connecter authentiquement. Fondé en 2024, il a commencé comme un petit cercle de professionnels qui croyaient au pouvoir de la fraternité genuiine.",
+      "p2": "En peu de temps, la plateforme a grandi pour couvrir plus de 150 pays, rassemblant médecins, avocats, entrepreneurs, artistes et leaders communautaires unis par les mêmes valeurs : intégrité, solidarité et excellence.",
+      "p3": "Aujourd'hui, Vitriol est bien plus qu'un réseau social. C'est un système de soutien mondial — quand un membre fait face à une crise, la fraternité répond. Cet esprit nous définit."
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "brotherhood": {
+        "title": "Fraternité",
+        "description": "Des relations construites sur une confiance genuiine et un engagement mutuel qui traversent les frontières."
+      },
+      "global": {
+        "title": "Portée Mondiale",
+        "description": "Présence dans plus de 150 pays, connectant les diversités culturelles autour de valeurs communes."
+      },
+      "solidarity": {
+        "title": "Solidarité",
+        "description": "Soutien actif aux membres dans les moments de besoin, de la santé aux questions professionnelles."
+      },
+      "integrity": {
+        "title": "Intégrité",
+        "description": "Transparence, honnêteté et éthique comme piliers de toutes les interactions sur la plateforme."
+      },
+      "inclusion": {
+        "title": "Inclusion",
+        "description": "Respect de la diversité culturelle, raciale et professionnelle au sein de la fraternité mondiale."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "Engagement envers la croissance continue et la plus haute qualité dans tout ce que nous faisons."
+      }
+    },
+    "stats": {
+      "countries": {
+        "value": "150+",
+        "label": "Pays"
+      },
+      "members": {
+        "value": "12K+",
+        "label": "Membres"
+      },
+      "years": {
+        "value": "1+",
+        "label": "Années"
+      },
+      "requests": {
+        "value": "500+",
+        "label": "Demandes Traitées"
+      }
+    }
+  },
+  "privacy": {
+    "title": "Politique de Confidentialité",
+    "lastUpdated": "Dernière mise à jour : Janvier 2026",
+    "intro": "Vitriol s'engage à protéger votre vie privée et vos données personnelles. Cette politique décrit comment nous collectons, utilisons et protégeons les informations que vous nous fournissez lors de l'utilisation de notre plateforme.",
+    "sections": {
+      "collection": {
+        "title": "1. Données que Nous Collectons",
+        "content": "Nous collectons les informations que vous fournissez directement, telles que nom, e-mail, photo de profil, localisation, profession et intérêts. Nous collectons également des données d'utilisation de la plateforme de manière anonyme et agrégée pour améliorer nos services."
+      },
+      "use": {
+        "title": "2. Comment Nous Utilisons Vos Données",
+        "content": "Vos données sont utilisées exclusivement pour exploiter la plateforme, personnaliser votre expérience, faciliter les connexions avec d'autres membres, envoyer des notifications pertinentes et assurer la sécurité de la communauté. Nous ne vendons ni ne partageons jamais vos données personnelles à des tiers à des fins commerciales."
+      },
+      "sharing": {
+        "title": "3. Partage d'Informations",
+        "content": "Vos informations de profil sont visibles uniquement par les autres membres vérifiés de la plateforme. Les données sensibles ne sont jamais partagées avec des tiers sauf si requis par la loi ou avec votre consentement explicite."
+      },
+      "security": {
+        "title": "4. Sécurité des Données",
+        "content": "Nous utilisons le chiffrement de bout en bout, des serveurs sécurisés et des pratiques de sécurité modernes pour protéger vos données. Nous effectuons des audits réguliers et suivons les meilleures pratiques du secteur."
+      },
+      "cookies": {
+        "title": "5. Cookies et Suivi",
+        "content": "Nous utilisons des cookies essentiels au fonctionnement de la plateforme et des cookies optionnels pour l'analyse des performances. Vous pouvez gérer vos préférences de cookies dans les paramètres de votre navigateur."
+      },
+      "rights": {
+        "title": "6. Vos Droits",
+        "content": "Vous avez le droit d'accéder, corriger, exporter ou supprimer vos données à tout moment. Vous pouvez également demander une restriction du traitement ou vous opposer à l'utilisation de vos données. Contactez-nous à l'e-mail ci-dessous pour exercer ces droits."
+      },
+      "contact": {
+        "title": "7. Modifications de cette Politique",
+        "content": "Nous pouvons mettre à jour cette politique périodiquement. Lorsque des changements importants sont apportés, nous vous notifierons par e-mail et afficherons un avis sur la plateforme. L'utilisation continue après notification constitue votre acceptation des changements."
+      }
+    },
+    "contact": {
+      "title": "Questions sur la Confidentialité ?",
+      "description": "Contactez notre équipe de confidentialité."
+    }
+  },
+  "terms": {
+    "title": "Conditions d'Utilisation",
+    "lastUpdated": "Dernière mise à jour : Janvier 2026",
+    "intro": "En utilisant Vitriol, vous acceptez ces Conditions d'Utilisation. Veuillez les lire attentivement avant de créer votre compte ou d'utiliser toute fonctionnalité de la plateforme.",
+    "sections": {
+      "acceptance": {
+        "title": "1. Acceptation des Conditions",
+        "content": "En créant un compte ou en utilisant tout service Vitriol, vous confirmez avoir lu, compris et accepté ces conditions. Si vous n'êtes pas d'accord avec une partie, vous ne devez pas utiliser la plateforme."
+      },
+      "membership": {
+        "title": "2. Éligibilité et Adhésion",
+        "content": "L'adhésion à Vitriol est exclusive aux hommes de 21 ans et plus partageant les valeurs de la plateforme. Les nouveaux membres passent par un processus de vérification. Vitriol se réserve le droit de refuser ou de résilier les adhésions."
+      },
+      "conduct": {
+        "title": "3. Code de Conduite",
+        "content": "Les membres doivent agir avec respect, intégrité et fraternité. Le harcèlement, la discrimination, le spam, le partage de contenu illégal ou tout comportement nuisant à d'autres membres est interdit."
+      },
+      "content": {
+        "title": "4. Contenu Utilisateur",
+        "content": "Vous êtes responsable de tout le contenu que vous publiez. En publiant du contenu, vous accordez à Vitriol une licence non exclusive pour l'afficher sur la plateforme. Le contenu violant les droits de tiers sera supprimé."
+      },
+      "privacy": {
+        "title": "5. Confidentialité",
+        "content": "L'utilisation de vos données est régie par notre Politique de Confidentialité, qui fait partie intégrante de ces conditions. En utilisant la plateforme, vous consentez aux pratiques qui y sont décrites."
+      },
+      "intellectual": {
+        "title": "6. Propriété Intellectuelle",
+        "content": "La marque Vitriol, les logos, le design et le code de la plateforme sont la propriété exclusive de l'entreprise. Toute reproduction ou utilisation commerciale sans autorisation écrite préalable est interdite."
+      },
+      "termination": {
+        "title": "7. Résiliation de Compte",
+        "content": "Vous pouvez fermer votre compte à tout moment. Vitriol peut suspendre ou résilier les comptes violant ces conditions, sans préavis dans les cas graves. Après la fermeture, vos données seront traitées conformément à la Politique de Confidentialité."
+      },
+      "liability": {
+        "title": "8. Limitation de Responsabilité",
+        "content": "Vitriol n'est pas responsable des dommages indirects résultant de l'utilisation de la plateforme. La responsabilité totale est limitée aux montants payés pour le service au cours des 12 derniers mois."
+      }
+    },
+    "contact": {
+      "title": "Questions Juridiques ?",
+      "description": "Contactez notre équipe juridique."
+    }
   }
 }

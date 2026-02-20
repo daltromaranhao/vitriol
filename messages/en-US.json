@@ -260,5 +260,154 @@
     "privacy": "Privacy",
     "terms": "Terms",
     "contact": "Contact"
+  },
+  "about": {
+    "title": "About Vitriol",
+    "subtitle": "Building bridges between brothers around the world since 2024.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "Vitriol exists to connect men of exceptional character across every continent, creating a global network of trust, mutual support, and genuine fraternity that transcends geographical and cultural boundaries."
+    },
+    "vision": {
+      "title": "Vision",
+      "description": "To be the most trusted and exclusive networking platform in the world, where every member contributes their unique expertise to strengthen the global brotherhood."
+    },
+    "purpose": {
+      "title": "Purpose",
+      "description": "To facilitate meaningful connections, support members in critical situations, and cultivate an environment of personal and professional growth among trusted peers."
+    },
+    "story": {
+      "title": "Our Story",
+      "p1": "Vitriol was born from the need to create an exclusive space where men from different countries and cultures could connect authentically. Founded in 2024, it began as a small circle of professionals who believed in the power of genuine fraternity.",
+      "p2": "In a short time, the platform grew to over 150 countries, bringing together doctors, lawyers, entrepreneurs, artists, and community leaders united by the same set of values: integrity, solidarity, and excellence.",
+      "p3": "Today, Vitriol is much more than a social network. It is a global support system — when a member faces a crisis, the brotherhood responds. That spirit defines us."
+    },
+    "values": {
+      "title": "Our Values",
+      "brotherhood": {
+        "title": "Brotherhood",
+        "description": "Relationships built on genuine trust and mutual commitment that cross borders."
+      },
+      "global": {
+        "title": "Global Reach",
+        "description": "Presence in over 150 countries, connecting cultural diversities around shared values."
+      },
+      "solidarity": {
+        "title": "Solidarity",
+        "description": "Active support for members in times of need, from health to professional matters."
+      },
+      "integrity": {
+        "title": "Integrity",
+        "description": "Transparency, honesty, and ethics as pillars of all platform interactions."
+      },
+      "inclusion": {
+        "title": "Inclusion",
+        "description": "Respect for cultural, racial, and professional diversity within the global brotherhood."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "Commitment to continuous growth and the highest quality in everything we do."
+      }
+    },
+    "stats": {
+      "countries": {
+        "value": "150+",
+        "label": "Countries"
+      },
+      "members": {
+        "value": "12K+",
+        "label": "Members"
+      },
+      "years": {
+        "value": "1+",
+        "label": "Years"
+      },
+      "requests": {
+        "value": "500+",
+        "label": "Requests Fulfilled"
+      }
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: January 2026",
+    "intro": "Vitriol is committed to protecting your privacy and personal data. This policy describes how we collect, use, and protect the information you provide when using our platform.",
+    "sections": {
+      "collection": {
+        "title": "1. Data We Collect",
+        "content": "We collect information you provide directly, such as name, email, profile photo, location, profession, and interests. We also collect platform usage data — pages visited, connections made, content interactions — always anonymously and in aggregate to improve our services."
+      },
+      "use": {
+        "title": "2. How We Use Your Data",
+        "content": "Your data is used exclusively to operate the platform, personalize your experience, facilitate connections with other members, send relevant notifications, and ensure community safety. We never sell or share your personal data with third parties for commercial purposes."
+      },
+      "sharing": {
+        "title": "3. Information Sharing",
+        "content": "Your profile information is visible only to other verified members of the platform. Sensitive data is never shared with third parties except when required by law or with your explicit consent."
+      },
+      "security": {
+        "title": "4. Data Security",
+        "content": "We use end-to-end encryption, secure servers, and modern security practices to protect your data. We conduct regular audits and follow industry best practices to minimize risk."
+      },
+      "cookies": {
+        "title": "5. Cookies and Tracking",
+        "content": "We use essential cookies for platform functionality and optional cookies for performance analysis. You can manage your cookie preferences in your browser settings."
+      },
+      "rights": {
+        "title": "6. Your Rights",
+        "content": "You have the right to access, correct, export, or delete your data at any time. You may also request processing restrictions or object to data use. To exercise these rights, contact us at the email below."
+      },
+      "contact": {
+        "title": "7. Changes to This Policy",
+        "content": "We may update this policy periodically. When significant changes are made, we will notify you by email and display a notice on the platform. Continued use after notification constitutes your acceptance of the changes."
+      }
+    },
+    "contact": {
+      "title": "Privacy Questions?",
+      "description": "Contact our privacy team."
+    }
+  },
+  "terms": {
+    "title": "Terms of Use",
+    "lastUpdated": "Last updated: January 2026",
+    "intro": "By using Vitriol, you agree to these Terms of Use. Please read them carefully before creating your account or using any platform feature.",
+    "sections": {
+      "acceptance": {
+        "title": "1. Acceptance of Terms",
+        "content": "By creating an account or using any Vitriol service, you confirm that you have read, understood, and agree to these terms. If you disagree with any part, you must not use the platform."
+      },
+      "membership": {
+        "title": "2. Eligibility and Membership",
+        "content": "Vitriol membership is exclusive to men aged 21 and over who share the platform's values. New members go through a verification process. Vitriol reserves the right to refuse or terminate memberships that do not meet community standards."
+      },
+      "conduct": {
+        "title": "3. Code of Conduct",
+        "content": "Members must act with respect, integrity, and fraternity. Harassment, discrimination, spam, sharing illegal content, or any behavior that harms other members or the community's reputation is prohibited."
+      },
+      "content": {
+        "title": "4. User Content",
+        "content": "You are responsible for all content you post. By posting content, you grant Vitriol a non-exclusive license to display it on the platform. Content that violates third-party rights or applicable laws will be removed."
+      },
+      "privacy": {
+        "title": "5. Privacy",
+        "content": "The use of your data is governed by our Privacy Policy, which is an integral part of these terms. By using the platform, you consent to the practices described therein."
+      },
+      "intellectual": {
+        "title": "6. Intellectual Property",
+        "content": "The Vitriol brand, logos, platform design, and code are the exclusive property of the company. Reproduction, distribution, or commercial use without prior written authorization is prohibited."
+      },
+      "termination": {
+        "title": "7. Account Termination",
+        "content": "You may close your account at any time. Vitriol may suspend or terminate accounts that violate these terms, without prior notice in serious cases. After closure, your data will be handled per the Privacy Policy."
+      },
+      "liability": {
+        "title": "8. Limitation of Liability",
+        "content": "Vitriol is not responsible for indirect damages resulting from platform use. Total liability is limited to amounts paid for the service in the last 12 months. Connections and interactions between members are the responsibility of those members."
+      }
+    },
+    "contact": {
+      "title": "Legal Questions?",
+      "description": "Contact our legal team."
+    }
   }
 }

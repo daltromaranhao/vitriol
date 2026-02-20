@@ -315,13 +315,13 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
               <span className="text-sm text-muted-foreground">{tFooter('copyright')}</span>
             </div>
             <div className="flex gap-6 text-sm text-muted-foreground">
-              <Link href="/about" className="hover:text-accent transition-colors">
+              <Link href={`/${locale}/about`} className="hover:text-accent transition-colors">
                 {tFooter('about')}
               </Link>
-              <Link href="/privacy" className="hover:text-accent transition-colors">
+              <Link href={`/${locale}/privacy`} className="hover:text-accent transition-colors">
                 {tFooter('privacy')}
               </Link>
-              <Link href="/terms" className="hover:text-accent transition-colors">
+              <Link href={`/${locale}/terms`} className="hover:text-accent transition-colors">
                 {tFooter('terms')}
               </Link>
             </div>
