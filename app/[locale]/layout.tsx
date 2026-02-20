@@ -22,14 +22,14 @@ export default async function LocaleLayout({ children, params }: Props) {
     notFound();
   }
 
-  // Fetch messages for the locale
-  const messages = await getMessages();
+  // Fetch messages for the locale - need to pass locale explicitly
+  const messages = await getMessages({ locale });
 
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className="font-sans antialiased">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          <NextIntlClientProvider messages={messages}>
+          <NextIntlClientProvider messages={messages} locale={locale}>
             {children}
           </NextIntlClientProvider>
         </ThemeProvider>
