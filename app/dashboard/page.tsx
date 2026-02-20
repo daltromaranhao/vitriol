@@ -100,10 +100,10 @@ export default async function DashboardPage() {
         {/* Welcome Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-2">
-            Welcome back, {session.user?.name || "Guest"}!
+            Welcome back, {session.user?.name || "Guest"}
           </h1>
           <p className="text-muted-foreground">
-            Here's what's happening in your network today.
+            Here's your network activity
           </p>
         </div>
 

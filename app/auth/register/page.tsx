@@ -57,16 +57,16 @@ export default function RegisterPage() {
           <div className="flex justify-center mb-4">
             <VitriolLogo size={60} className="text-accent" />
           </div>
-          <h2 className="text-3xl font-bold tracking-tight">Join Vitriol</h2>
+          <h2 className="text-3xl font-bold tracking-tight">Vitriol</h2>
           <p className="mt-2 text-sm text-muted-foreground">
-            Create your account and connect globally
+            Global Brotherhood
           </p>
         </div>
 
         <Card className="border-border/50">
           <CardHeader>
-            <CardTitle>Create Account</CardTitle>
-            <CardDescription>Enter your information to get started</CardDescription>
+            <CardTitle>Sign Up</CardTitle>
+            <CardDescription>Create your account and join the network</CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -95,7 +95,7 @@ export default function RegisterPage() {
 
               <div className="space-y-2">
                 <label htmlFor="email" className="text-sm font-medium">
-                  Email Address
+                  Email
                 </label>
                 <div className="relative">
                   <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
@@ -137,7 +137,7 @@ export default function RegisterPage() {
                 variant="accent"
                 className="w-full gap-2"
               >
-                {loading ? "Creating account..." : "Create Account"}
+                {loading ? "Creating account..." : "Sign Up"}
                 <ArrowRight className="w-4 h-4" />
               </Button>
             </form>

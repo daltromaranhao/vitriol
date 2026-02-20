@@ -47,7 +47,7 @@ export function Navbar({ showFull = true, user }: NavbarProps) {
             <VitriolLogo size={40} className="text-accent" />
             <div className="flex flex-col">
               <span className="text-lg font-semibold tracking-tight">Vitriol</span>
-              <span className="text-xs text-muted-foreground">Global Brotherhood</span>
+              <span className="text-xs text-muted-foreground">© 2026 - Vitriol - Global Brotherhood</span>
             </div>
           </Link>
 
@@ -96,7 +96,7 @@ export function Navbar({ showFull = true, user }: NavbarProps) {
                 </Link>
                 <Link href="/auth/register">
                   <Button variant="accent" size="sm">
-                    Join Now
+                    Sign Up
                   </Button>
                 </Link>
               </>

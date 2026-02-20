@@ -53,16 +53,16 @@ export default function LoginPage() {
           <div className="flex justify-center mb-4">
             <VitriolLogo size={60} className="text-accent" />
           </div>
-          <h2 className="text-3xl font-bold tracking-tight">Welcome Back</h2>
+          <h2 className="text-3xl font-bold tracking-tight">Vitriol</h2>
           <p className="mt-2 text-sm text-muted-foreground">
-            Sign in to your Vitriol account
+            Global Brotherhood
           </p>
         </div>
 
         <Card className="border-border/50">
           <CardHeader>
             <CardTitle>Sign In</CardTitle>
-            <CardDescription>Enter your credentials to continue</CardDescription>
+            <CardDescription>Welcome back to the network</CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -74,7 +74,7 @@ export default function LoginPage() {
 
               <div className="space-y-2">
                 <label htmlFor="email" className="text-sm font-medium">
-                  Email Address
+                  Email
                 </label>
                 <div className="relative">
                   <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
