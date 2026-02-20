@@ -1,5 +1,5 @@
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n';
 import { ThemeProvider } from '@/providers/theme-provider';
@@ -11,11 +11,10 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: {params: Promise<{ locale: string }>}) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'common' });
   
   return {
     title: 'Vitriol - Global Brotherhood',
-    description: t('description') || 'Global network connecting professionals worldwide',
+    description: 'A global network connecting professionals worldwide for mutual support, collaboration, and growth.',
   };
 }
 
