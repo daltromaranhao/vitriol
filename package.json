@@ -23,6 +23,7 @@
   "license": "MIT",
   "description": "Vitriol - Global Brotherhood SaaS Platform",
   "dependencies": {
+    "@auth/core": "^0.41.1",
     "@auth/prisma-adapter": "^2.11.1",
     "bcryptjs": "^3.0.3",
     "class-variance-authority": "^0.7.1",

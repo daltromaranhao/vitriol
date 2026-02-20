@@ -15,6 +15,7 @@ import {
 import { Button } from "./ui/button";
 import { Avatar } from "./ui/avatar";
 import { ThemeToggle } from "./theme-toggle";
+import { LanguageSwitcher } from "./language-switcher";
 import { VitriolLogo } from "./vitriol-logo";
 import { cn } from "@/lib/utils";
 
@@ -75,6 +76,7 @@ export function Navbar({ showFull = true, user }: NavbarProps) {
 
           {/* Right Side Actions */}
           <div className="flex items-center gap-2">
+            <LanguageSwitcher />
             <ThemeToggle />
             
             {user ? (
