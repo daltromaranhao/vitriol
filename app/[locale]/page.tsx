@@ -10,6 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Navbar } from "@/components/navbar";
+import { HeroIllustration } from "@/components/hero-illustration";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
@@ -115,7 +116,9 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             {/* Hero Image */}
             <div className="relative hidden lg:block">
               <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 to-primary/20 rounded-2xl blur-3xl" />
-              <div className="relative aspect-square rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 border border-border/50 shadow-2xl" />
+              <div className="relative aspect-square rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 border border-border/50 shadow-2xl flex items-center justify-center overflow-hidden">
+                <HeroIllustration />
+              </div>
             </div>
           </div>
         </div>
