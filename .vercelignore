@@ -1,0 +1,6 @@
+design-files
+*.md
+!README.md
+!DEPLOY.md
+.env
+.env.local
