@@ -7,7 +7,7 @@ import { NextRequest, NextResponse } from 'next/server';
 const intlMiddleware = createIntlMiddleware({
   locales,
   defaultLocale,
-  localePrefix: 'as-needed',
+  localePrefix: 'always', // Always include locale in URL
 });
 
 // Protected routes that require authentication
