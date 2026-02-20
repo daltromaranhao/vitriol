@@ -1,0 +1,252 @@
+{
+  "nav": {
+    "home": "Home",
+    "members": "Members",
+    "map": "Map",
+    "messages": "Messages",
+    "connections": "Connections",
+    "notifications": "Notifications",
+    "profile": "Profile",
+    "settings": "Settings",
+    "helpRequests": "Help Requests",
+    "feed": "Feed"
+  },
+  "common": {
+    "welcome": "Welcome",
+    "search": "Search",
+    "filter": "Filter",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "send": "Send",
+    "connect": "Connect",
+    "message": "Message",
+    "viewProfile": "View Profile",
+    "loading": "Loading...",
+    "online": "Online",
+    "offline": "Offline"
+  },
+  "landing": {
+    "hero": {
+      "title": "Vitriol",
+      "subtitle": "Global Brotherhood",
+      "tagline": "Connect with trusted professionals worldwide. Build meaningful relationships across borders.",
+      "cta": "Join the Network",
+      "login": "Sign In"
+    },
+    "features": {
+      "title": "A Premium Global Network",
+      "subtitle": "Connect, collaborate, and grow with verified members worldwide",
+      "global": {
+        "title": "Global Reach",
+        "description": "Connect with members in over 150 countries"
+      },
+      "verified": {
+        "title": "Verified Members",
+        "description": "Trust-based community with verified profiles"
+      },
+      "professional": {
+        "title": "Professional Network",
+        "description": "Build meaningful business relationships"
+      },
+      "private": {
+        "title": "Private & Secure",
+        "description": "Your data and connections remain confidential"
+      }
+    },
+    "help": {
+      "title": "Global Help Network",
+      "subtitle": "Brotherhood in Action",
+      "description": "More than just networking—Vitriol is a global support system. When members face challenges, whether medical emergencies, professional needs, or urgent situations, the brotherhood responds.",
+      "medical": {
+        "title": "Medical Support",
+        "description": "Connect with healthcare professionals and get recommendations in any region"
+      },
+      "professional": {
+        "title": "Professional Assistance",
+        "description": "Access expertise, mentorship, and business support from members worldwide"
+      },
+      "global": {
+        "title": "Global Response",
+        "description": "Members in 150+ countries ready to assist in emergencies and urgent situations"
+      },
+      "stats": {
+        "coverage": "24/7",
+        "coverageLabel": "Global Coverage",
+        "response": "2.4h",
+        "responseLabel": "Avg Response",
+        "helped": "156",
+        "helpedLabel": "Helped/Month"
+      }
+    },
+    "testimonials": {
+      "title": "Trusted by Leaders Worldwide"
+    },
+    "cta": {
+      "title": "Ready to Join?",
+      "description": "Become part of an exclusive global network",
+      "button": "Get Started"
+    },
+    "stats": {
+      "countries": "150+",
+      "countriesLabel": "Countries",
+      "members": "50K+",
+      "membersLabel": "Members",
+      "verified": "98%",
+      "verifiedLabel": "Verified"
+    }
+  },
+  "auth": {
+    "signUp": "Sign Up",
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "email": "Email",
+    "password": "Password",
+    "name": "Name",
+    "forgotPassword": "Forgot Password?",
+    "resetPassword": "Reset Password",
+    "continueWithGoogle": "Continue with Google",
+    "continueWithApple": "Continue with Apple",
+    "orContinueWith": "Or continue with email",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "selectLanguage": "Select your language"
+  },
+  "onboarding": {
+    "title": "Complete Your Profile",
+    "step1": "Basic Information",
+    "step2": "Location",
+    "step3": "Professional Details",
+    "step4": "Interests",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "country": "Country",
+    "city": "City",
+    "profession": "Profession",
+    "bio": "Bio",
+    "interests": "Interests",
+    "uploadPhoto": "Upload Photo",
+    "next": "Next",
+    "previous": "Previous",
+    "finish": "Finish"
+  },
+  "dashboard": {
+    "welcome": "Welcome back",
+    "feed": "Recent Activity",
+    "suggested": "Suggested Connections",
+    "quickActions": "Quick Actions",
+    "stats": {
+      "connections": "Connections",
+      "reach": "Network Reach",
+      "conversations": "Conversations",
+      "views": "Profile Views"
+    }
+  },
+  "profile": {
+    "about": "About",
+    "location": "Location",
+    "profession": "Profession",
+    "memberSince": "Member since",
+    "connections": "Connections",
+    "verified": "Verified Member",
+    "editProfile": "Edit Profile",
+    "interests": "Interests",
+    "activity": "Recent Activity",
+    "contact": "Contact Information",
+    "verification": "Verification"
+  },
+  "connections": {
+    "title": "Connections",
+    "requests": "Requests",
+    "suggestions": "Suggestions",
+    "myConnections": "My Connections",
+    "pending": "Pending",
+    "accept": "Accept",
+    "decline": "Decline",
+    "mutualConnections": "mutual connections"
+  },
+  "members": {
+    "title": "Members Directory",
+    "searchPlaceholder": "Search members...",
+    "sortBy": "Sort by",
+    "relevance": "Relevance",
+    "newest": "Newest",
+    "name": "Name"
+  },
+  "map": {
+    "title": "Global Network Map",
+    "members": "Members",
+    "searchLocation": "Search location...",
+    "regionalBreakdown": "Regional Breakdown"
+  },
+  "messages": {
+    "title": "Messages",
+    "conversations": "Conversations",
+    "newMessage": "New Message",
+    "searchMessages": "Search messages...",
+    "typeMessage": "Type a message...",
+    "noMessages": "No messages yet"
+  },
+  "feed": {
+    "title": "Community Feed",
+    "whatsOnMind": "What's on your mind?",
+    "post": "Post",
+    "addImage": "Add Image",
+    "like": "Like",
+    "comment": "Comment",
+    "share": "Share"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "markAllRead": "Mark All as Read",
+    "noNotifications": "No notifications"
+  },
+  "helpRequests": {
+    "title": "Help Requests",
+    "subtitle": "Global support network for members in need",
+    "createRequest": "Create Help Request",
+    "searchPlaceholder": "Search help requests...",
+    "offerHelp": "Offer Help",
+    "viewDetails": "View Details",
+    "responses": "responses",
+    "noRequests": "No help requests found",
+    "categories": {
+      "all": "All Categories",
+      "medical": "Medical",
+      "professional": "Professional",
+      "housing": "Housing",
+      "travel": "Travel",
+      "legal": "Legal",
+      "other": "Other"
+    },
+    "info": {
+      "title": "About Help Requests",
+      "description": "All help requests are reviewed and approved by administrators before being visible to the community. This ensures quality and prevents abuse of the system."
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "profile": "Profile",
+    "account": "Account",
+    "privacy": "Privacy",
+    "notifications": "Notifications",
+    "languageTheme": "Language & Theme",
+    "theme": "Theme",
+    "language": "Language",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "emailSettings": "Email Settings",
+    "passwordSettings": "Change Password",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm Password"
+  },
+  "footer": {
+    "copyright": "© 2026 - Vitriol - Global Brotherhood",
+    "about": "About",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "contact": "Contact"
+  }
+}

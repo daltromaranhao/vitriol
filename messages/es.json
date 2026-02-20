@@ -1,0 +1,252 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "members": "Miembros",
+    "map": "Mapa",
+    "messages": "Mensajes",
+    "connections": "Conexiones",
+    "notifications": "Notificaciones",
+    "profile": "Perfil",
+    "settings": "Configuración",
+    "helpRequests": "Solicitudes de Ayuda",
+    "feed": "Feed"
+  },
+  "common": {
+    "welcome": "Bienvenido",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "send": "Enviar",
+    "connect": "Conectar",
+    "message": "Mensaje",
+    "viewProfile": "Ver Perfil",
+    "loading": "Cargando...",
+    "online": "En línea",
+    "offline": "Desconectado"
+  },
+  "landing": {
+    "hero": {
+      "title": "Vitriol",
+      "subtitle": "Hermandad Global",
+      "tagline": "Conéctate con profesionales de confianza en todo el mundo. Construye relaciones significativas a través de fronteras.",
+      "cta": "Únete a la Red",
+      "login": "Iniciar Sesión"
+    },
+    "features": {
+      "title": "Una Red Global Premium",
+      "subtitle": "Conéctate, colabora y crece con miembros verificados en todo el mundo",
+      "global": {
+        "title": "Alcance Global",
+        "description": "Conéctate con miembros en más de 150 países"
+      },
+      "verified": {
+        "title": "Miembros Verificados",
+        "description": "Comunidad basada en confianza con perfiles verificados"
+      },
+      "professional": {
+        "title": "Red Profesional",
+        "description": "Construye relaciones empresariales significativas"
+      },
+      "private": {
+        "title": "Privado y Seguro",
+        "description": "Tus datos y conexiones permanecen confidenciales"
+      }
+    },
+    "help": {
+      "title": "Red Global de Ayuda",
+      "subtitle": "Hermandad en Acción",
+      "description": "Más que networking—Vitriol es un sistema de apoyo global. Cuando los miembros enfrentan desafíos, ya sean emergencias médicas, necesidades profesionales o situaciones urgentes, la hermandad responde.",
+      "medical": {
+        "title": "Apoyo Médico",
+        "description": "Conéctate con profesionales de la salud y obtén recomendaciones en cualquier región"
+      },
+      "professional": {
+        "title": "Asistencia Profesional",
+        "description": "Accede a experiencia, mentoría y apoyo empresarial de miembros en todo el mundo"
+      },
+      "global": {
+        "title": "Respuesta Global",
+        "description": "Miembros en más de 150 países listos para ayudar en emergencias y situaciones urgentes"
+      },
+      "stats": {
+        "coverage": "24/7",
+        "coverageLabel": "Cobertura Global",
+        "response": "2.4h",
+        "responseLabel": "Respuesta Promedio",
+        "helped": "156",
+        "helpedLabel": "Ayudados/Mes"
+      }
+    },
+    "testimonials": {
+      "title": "Confiado por Líderes en Todo el Mundo"
+    },
+    "cta": {
+      "title": "¿Listo para Unirte?",
+      "description": "Forma parte de una red global exclusiva",
+      "button": "Comenzar"
+    },
+    "stats": {
+      "countries": "150+",
+      "countriesLabel": "Países",
+      "members": "50K+",
+      "membersLabel": "Miembros",
+      "verified": "98%",
+      "verifiedLabel": "Verificados"
+    }
+  },
+  "auth": {
+    "signUp": "Registrarse",
+    "signIn": "Iniciar Sesión",
+    "signOut": "Cerrar Sesión",
+    "email": "Correo",
+    "password": "Contraseña",
+    "name": "Nombre",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "resetPassword": "Restablecer Contraseña",
+    "continueWithGoogle": "Continuar con Google",
+    "continueWithApple": "Continuar con Apple",
+    "orContinueWith": "O continuar con correo",
+    "noAccount": "¿No tienes cuenta?",
+    "haveAccount": "¿Ya tienes cuenta?",
+    "selectLanguage": "Selecciona tu idioma"
+  },
+  "onboarding": {
+    "title": "Completa tu Perfil",
+    "step1": "Información Básica",
+    "step2": "Ubicación",
+    "step3": "Detalles Profesionales",
+    "step4": "Intereses",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "country": "País",
+    "city": "Ciudad",
+    "profession": "Profesión",
+    "bio": "Biografía",
+    "interests": "Intereses",
+    "uploadPhoto": "Subir Foto",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "finish": "Finalizar"
+  },
+  "dashboard": {
+    "welcome": "Bienvenido de nuevo",
+    "feed": "Actividad Reciente",
+    "suggested": "Conexiones Sugeridas",
+    "quickActions": "Acciones Rápidas",
+    "stats": {
+      "connections": "Conexiones",
+      "reach": "Alcance de la Red",
+      "conversations": "Conversaciones",
+      "views": "Vistas del Perfil"
+    }
+  },
+  "profile": {
+    "about": "Acerca de",
+    "location": "Ubicación",
+    "profession": "Profesión",
+    "memberSince": "Miembro desde",
+    "connections": "Conexiones",
+    "verified": "Miembro Verificado",
+    "editProfile": "Editar Perfil",
+    "interests": "Intereses",
+    "activity": "Actividad Reciente",
+    "contact": "Información de Contacto",
+    "verification": "Verificación"
+  },
+  "connections": {
+    "title": "Conexiones",
+    "requests": "Solicitudes",
+    "suggestions": "Sugerencias",
+    "myConnections": "Mis Conexiones",
+    "pending": "Pendiente",
+    "accept": "Aceptar",
+    "decline": "Rechazar",
+    "mutualConnections": "conexiones en común"
+  },
+  "members": {
+    "title": "Directorio de Miembros",
+    "searchPlaceholder": "Buscar miembros...",
+    "sortBy": "Ordenar por",
+    "relevance": "Relevancia",
+    "newest": "Más Reciente",
+    "name": "Nombre"
+  },
+  "map": {
+    "title": "Mapa de la Red Global",
+    "members": "Miembros",
+    "searchLocation": "Buscar ubicación...",
+    "regionalBreakdown": "Desglose Regional"
+  },
+  "messages": {
+    "title": "Mensajes",
+    "conversations": "Conversaciones",
+    "newMessage": "Nuevo Mensaje",
+    "searchMessages": "Buscar mensajes...",
+    "typeMessage": "Escribe un mensaje...",
+    "noMessages": "Sin mensajes aún"
+  },
+  "feed": {
+    "title": "Feed de la Comunidad",
+    "whatsOnMind": "¿Qué estás pensando?",
+    "post": "Publicar",
+    "addImage": "Agregar Imagen",
+    "like": "Me gusta",
+    "comment": "Comentar",
+    "share": "Compartir"
+  },
+  "notifications": {
+    "title": "Notificaciones",
+    "markAllRead": "Marcar Todo como Leído",
+    "noNotifications": "Sin notificaciones"
+  },
+  "helpRequests": {
+    "title": "Solicitudes de Ayuda",
+    "subtitle": "Red global de apoyo para miembros necesitados",
+    "createRequest": "Crear Solicitud de Ayuda",
+    "searchPlaceholder": "Buscar solicitudes de ayuda...",
+    "offerHelp": "Ofrecer Ayuda",
+    "viewDetails": "Ver Detalles",
+    "responses": "respuestas",
+    "noRequests": "No se encontraron solicitudes de ayuda",
+    "categories": {
+      "all": "Todas las Categorías",
+      "medical": "Médico",
+      "professional": "Profesional",
+      "housing": "Vivienda",
+      "travel": "Viaje",
+      "legal": "Legal",
+      "other": "Otro"
+    },
+    "info": {
+      "title": "Acerca de las Solicitudes de Ayuda",
+      "description": "Todas las solicitudes de ayuda son revisadas y aprobadas por administradores antes de ser visibles para la comunidad. Esto asegura calidad y previene abuso del sistema."
+    }
+  },
+  "settings": {
+    "title": "Configuración",
+    "profile": "Perfil",
+    "account": "Cuenta",
+    "privacy": "Privacidad",
+    "notifications": "Notificaciones",
+    "languageTheme": "Idioma y Tema",
+    "theme": "Tema",
+    "language": "Idioma",
+    "darkMode": "Modo Oscuro",
+    "lightMode": "Modo Claro",
+    "emailSettings": "Configuración de Correo",
+    "passwordSettings": "Cambiar Contraseña",
+    "currentPassword": "Contraseña Actual",
+    "newPassword": "Nueva Contraseña",
+    "confirmPassword": "Confirmar Contraseña"
+  },
+  "footer": {
+    "copyright": "© 2026 - Vitriol - Hermandad Global",
+    "about": "Acerca de",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "contact": "Contacto"
+  }
+}

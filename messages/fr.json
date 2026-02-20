@@ -1,0 +1,252 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "members": "Membres",
+    "map": "Carte",
+    "messages": "Messages",
+    "connections": "Connexions",
+    "notifications": "Notifications",
+    "profile": "Profil",
+    "settings": "Paramètres",
+    "helpRequests": "Demandes d'Aide",
+    "feed": "Fil"
+  },
+  "common": {
+    "welcome": "Bienvenue",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "send": "Envoyer",
+    "connect": "Connecter",
+    "message": "Message",
+    "viewProfile": "Voir le Profil",
+    "loading": "Chargement...",
+    "online": "En ligne",
+    "offline": "Hors ligne"
+  },
+  "landing": {
+    "hero": {
+      "title": "Vitriol",
+      "subtitle": "Fraternité Mondiale",
+      "tagline": "Connectez-vous avec des professionnels de confiance du monde entier. Construisez des relations significatives au-delà des frontières.",
+      "cta": "Rejoindre le Réseau",
+      "login": "Se Connecter"
+    },
+    "features": {
+      "title": "Un Réseau Mondial Premium",
+      "subtitle": "Connectez-vous, collaborez et grandissez avec des membres vérifiés du monde entier",
+      "global": {
+        "title": "Portée Mondiale",
+        "description": "Connectez-vous avec des membres dans plus de 150 pays"
+      },
+      "verified": {
+        "title": "Membres Vérifiés",
+        "description": "Communauté basée sur la confiance avec des profils vérifiés"
+      },
+      "professional": {
+        "title": "Réseau Professionnel",
+        "description": "Construisez des relations d'affaires significatives"
+      },
+      "private": {
+        "title": "Privé et Sécurisé",
+        "description": "Vos données et connexions restent confidentielles"
+      }
+    },
+    "help": {
+      "title": "Réseau d'Aide Mondial",
+      "subtitle": "Fraternité en Action",
+      "description": "Plus qu'un simple réseau—Vitriol est un système de soutien mondial. Lorsque les membres font face à des défis, qu'il s'agisse d'urgences médicales, de besoins professionnels ou de situations urgentes, la fraternité répond.",
+      "medical": {
+        "title": "Soutien Médical",
+        "description": "Connectez-vous avec des professionnels de la santé et obtenez des recommandations dans n'importe quelle région"
+      },
+      "professional": {
+        "title": "Assistance Professionnelle",
+        "description": "Accédez à l'expertise, au mentorat et au soutien commercial des membres du monde entier"
+      },
+      "global": {
+        "title": "Réponse Mondiale",
+        "description": "Membres dans plus de 150 pays prêts à aider en cas d'urgence et de situations critiques"
+      },
+      "stats": {
+        "coverage": "24/7",
+        "coverageLabel": "Couverture Mondiale",
+        "response": "2.4h",
+        "responseLabel": "Réponse Moyenne",
+        "helped": "156",
+        "helpedLabel": "Aidés/Mois"
+      }
+    },
+    "testimonials": {
+      "title": "Fait Confiance par les Leaders du Monde Entier"
+    },
+    "cta": {
+      "title": "Prêt à Rejoindre?",
+      "description": "Devenez membre d'un réseau mondial exclusif",
+      "button": "Commencer"
+    },
+    "stats": {
+      "countries": "150+",
+      "countriesLabel": "Pays",
+      "members": "50K+",
+      "membersLabel": "Membres",
+      "verified": "98%",
+      "verifiedLabel": "Vérifiés"
+    }
+  },
+  "auth": {
+    "signUp": "S'inscrire",
+    "signIn": "Se Connecter",
+    "signOut": "Se Déconnecter",
+    "email": "Email",
+    "password": "Mot de passe",
+    "name": "Nom",
+    "forgotPassword": "Mot de passe oublié?",
+    "resetPassword": "Réinitialiser le Mot de Passe",
+    "continueWithGoogle": "Continuer avec Google",
+    "continueWithApple": "Continuer avec Apple",
+    "orContinueWith": "Ou continuer avec email",
+    "noAccount": "Vous n'avez pas de compte?",
+    "haveAccount": "Vous avez déjà un compte?",
+    "selectLanguage": "Sélectionnez votre langue"
+  },
+  "onboarding": {
+    "title": "Complétez Votre Profil",
+    "step1": "Informations de Base",
+    "step2": "Localisation",
+    "step3": "Détails Professionnels",
+    "step4": "Intérêts",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "country": "Pays",
+    "city": "Ville",
+    "profession": "Profession",
+    "bio": "Biographie",
+    "interests": "Intérêts",
+    "uploadPhoto": "Télécharger une Photo",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "finish": "Terminer"
+  },
+  "dashboard": {
+    "welcome": "Bon retour",
+    "feed": "Activité Récente",
+    "suggested": "Connexions Suggérées",
+    "quickActions": "Actions Rapides",
+    "stats": {
+      "connections": "Connexions",
+      "reach": "Portée du Réseau",
+      "conversations": "Conversations",
+      "views": "Vues du Profil"
+    }
+  },
+  "profile": {
+    "about": "À Propos",
+    "location": "Localisation",
+    "profession": "Profession",
+    "memberSince": "Membre depuis",
+    "connections": "Connexions",
+    "verified": "Membre Vérifié",
+    "editProfile": "Modifier le Profil",
+    "interests": "Intérêts",
+    "activity": "Activité Récente",
+    "contact": "Informations de Contact",
+    "verification": "Vérification"
+  },
+  "connections": {
+    "title": "Connexions",
+    "requests": "Demandes",
+    "suggestions": "Suggestions",
+    "myConnections": "Mes Connexions",
+    "pending": "En Attente",
+    "accept": "Accepter",
+    "decline": "Refuser",
+    "mutualConnections": "connexions mutuelles"
+  },
+  "members": {
+    "title": "Répertoire des Membres",
+    "searchPlaceholder": "Rechercher des membres...",
+    "sortBy": "Trier par",
+    "relevance": "Pertinence",
+    "newest": "Plus Récent",
+    "name": "Nom"
+  },
+  "map": {
+    "title": "Carte du Réseau Mondial",
+    "members": "Membres",
+    "searchLocation": "Rechercher un lieu...",
+    "regionalBreakdown": "Répartition Régionale"
+  },
+  "messages": {
+    "title": "Messages",
+    "conversations": "Conversations",
+    "newMessage": "Nouveau Message",
+    "searchMessages": "Rechercher des messages...",
+    "typeMessage": "Tapez un message...",
+    "noMessages": "Aucun message pour le moment"
+  },
+  "feed": {
+    "title": "Fil de la Communauté",
+    "whatsOnMind": "À quoi pensez-vous?",
+    "post": "Publier",
+    "addImage": "Ajouter une Image",
+    "like": "J'aime",
+    "comment": "Commenter",
+    "share": "Partager"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "markAllRead": "Tout Marquer comme Lu",
+    "noNotifications": "Aucune notification"
+  },
+  "helpRequests": {
+    "title": "Demandes d'Aide",
+    "subtitle": "Réseau de soutien mondial pour les membres dans le besoin",
+    "createRequest": "Créer une Demande d'Aide",
+    "searchPlaceholder": "Rechercher des demandes d'aide...",
+    "offerHelp": "Offrir de l'Aide",
+    "viewDetails": "Voir les Détails",
+    "responses": "réponses",
+    "noRequests": "Aucune demande d'aide trouvée",
+    "categories": {
+      "all": "Toutes les Catégories",
+      "medical": "Médical",
+      "professional": "Professionnel",
+      "housing": "Logement",
+      "travel": "Voyage",
+      "legal": "Juridique",
+      "other": "Autre"
+    },
+    "info": {
+      "title": "À Propos des Demandes d'Aide",
+      "description": "Toutes les demandes d'aide sont examinées et approuvées par les administrateurs avant d'être visibles pour la communauté. Cela garantit la qualité et prévient l'abus du système."
+    }
+  },
+  "settings": {
+    "title": "Paramètres",
+    "profile": "Profil",
+    "account": "Compte",
+    "privacy": "Confidentialité",
+    "notifications": "Notifications",
+    "languageTheme": "Langue et Thème",
+    "theme": "Thème",
+    "language": "Langue",
+    "darkMode": "Mode Sombre",
+    "lightMode": "Mode Clair",
+    "emailSettings": "Paramètres Email",
+    "passwordSettings": "Changer le Mot de Passe",
+    "currentPassword": "Mot de Passe Actuel",
+    "newPassword": "Nouveau Mot de Passe",
+    "confirmPassword": "Confirmer le Mot de Passe"
+  },
+  "footer": {
+    "copyright": "© 2026 - Vitriol - Fraternité Mondiale",
+    "about": "À Propos",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "contact": "Contact"
+  }
+}
