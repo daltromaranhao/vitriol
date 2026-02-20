@@ -46,3 +46,7 @@ next-env.d.ts
 
 # prisma
 /prisma/migrations
+
+# design files (reference only)
+/design-files
+*.zip
