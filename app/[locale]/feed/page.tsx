@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Navbar } from "@/components/navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,7 @@ import { Avatar } from "@/components/ui/avatar";
 import { ThumbsUp, MessageCircle, Share2, MoreHorizontal, Image as ImageIcon, CheckCircle } from "lucide-react";
 
 export default function FeedPage() {
+  const t = useTranslations("feed");
   const [postContent, setPostContent] = useState("");
 
   const posts = [
@@ -55,7 +57,7 @@ export default function FeedPage() {
 
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
-          <h1 className="text-4xl mb-2">Community Feed</h1>
+          <h1 className="text-4xl mb-2">{t('title')}</h1>
           <p className="text-muted-foreground">Share updates and connect with your network</p>
         </div>
 
@@ -68,15 +70,15 @@ export default function FeedPage() {
                 <textarea
                   value={postContent}
                   onChange={(e) => setPostContent(e.target.value)}
-                  placeholder="What's on your mind?"
+                  placeholder={t('whatsOnMind')}
                   className="w-full min-h-24 rounded-lg border border-border bg-background px-4 py-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent resize-none"
                 />
                 <div className="flex items-center justify-between mt-4">
                   <Button variant="ghost" size="sm" className="gap-2">
                     <ImageIcon className="w-4 h-4" />
-                    Add Image
+                    {t('addImage')}
                   </Button>
-                  <Button variant="accent" size="sm">Post</Button>
+                  <Button variant="accent" size="sm">{t('post')}</Button>
                 </div>
               </div>
             </div>

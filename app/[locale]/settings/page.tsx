@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from 'next-intl';
 import { Navbar } from "@/components/navbar";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -10,14 +11,16 @@ import { User, Lock, Bell, Globe, Moon, Sun, Shield } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function SettingsPage() {
+  const t = useTranslations('settings');
+  const tCommon = useTranslations('common');
   const [activeTab, setActiveTab] = useState("profile");
 
   const tabs = [
-    { id: "profile", label: "Profile", icon: User },
-    { id: "account", label: "Account", icon: Shield },
-    { id: "privacy", label: "Privacy", icon: Lock },
-    { id: "notifications", label: "Notifications", icon: Bell },
-    { id: "language", label: "Language & Theme", icon: Globe },
+    { id: "profile", label: t('profile'), icon: User },
+    { id: "account", label: t('account'), icon: Shield },
+    { id: "privacy", label: t('privacy'), icon: Lock },
+    { id: "notifications", label: t('notifications'), icon: Bell },
+    { id: "language", label: t('languageTheme'), icon: Globe },
   ];
 
   return (
@@ -26,7 +29,7 @@ export default function SettingsPage() {
 
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
-          <h1 className="text-4xl mb-2">Settings</h1>
+          <h1 className="text-4xl mb-2">{t('title')}</h1>
           <p className="text-muted-foreground">Manage your account settings and preferences</p>
         </div>
 
@@ -94,7 +97,7 @@ export default function SettingsPage() {
                         defaultValue="Experienced professional with 15+ years in international business development."
                       />
                     </div>
-                    <Button variant="accent">Save Changes</Button>
+                    <Button variant="accent">{tCommon('save')}</Button>
                   </CardContent>
                 </Card>
               </>
@@ -185,7 +188,7 @@ export default function SettingsPage() {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div>
-                    <label className="text-sm font-medium mb-2 block">Language</label>
+                    <label className="text-sm font-medium mb-2 block">{t('language')}</label>
                     <select className="w-full px-4 py-2 rounded-lg border border-border bg-card">
                       <option>English</option>
                       <option>Português</option>
@@ -194,15 +197,15 @@ export default function SettingsPage() {
                     </select>
                   </div>
                   <div>
-                    <label className="text-sm font-medium mb-2 block">Theme</label>
+                    <label className="text-sm font-medium mb-2 block">{t('theme')}</label>
                     <div className="grid grid-cols-2 gap-4">
                       <Button variant="outline" className="gap-2">
                         <Sun className="w-4 h-4" />
-                        Light Mode
+                        {t('lightMode')}
                       </Button>
                       <Button variant="accent" className="gap-2">
                         <Moon className="w-4 h-4" />
-                        Dark Mode
+                        {t('darkMode')}
                       </Button>
                     </div>
                   </div>

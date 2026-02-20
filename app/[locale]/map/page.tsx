@@ -1,9 +1,13 @@
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Navbar } from "@/components/navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Users } from "lucide-react";
 
-export default function MapPage() {
+export default async function MapPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("map");
   const regions = [
     { name: "North America", members: 12500, color: "bg-blue-500" },
     { name: "South America", members: 4200, color: "bg-green-500" },
@@ -19,7 +23,7 @@ export default function MapPage() {
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
-          <h1 className="text-4xl mb-2">Global Network Map</h1>
+          <h1 className="text-4xl mb-2">{t('title')}</h1>
           <p className="text-muted-foreground">
             Explore our global community of verified professionals
           </p>
@@ -55,7 +59,7 @@ export default function MapPage() {
                   <Users className="w-5 h-5 text-accent" />
                   <div>
                     <p className="text-2xl font-bold">{region.members.toLocaleString()}</p>
-                    <p className="text-xs text-muted-foreground">Members</p>
+                    <p className="text-xs text-muted-foreground">{t('members')}</p>
                   </div>
                 </div>
               </CardContent>

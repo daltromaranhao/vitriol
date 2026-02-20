@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Navbar } from "@/components/navbar";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -10,6 +11,8 @@ import { Search, Send, MoreVertical, Phone, Video } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function MessagesPage() {
+  const t = useTranslations("messages");
+  const tCommon = useTranslations("common");
   const [selectedChat, setSelectedChat] = useState(0);
   const [message, setMessage] = useState("");
 
@@ -98,7 +101,7 @@ export default function MessagesPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-6">
-          <h1 className="text-4xl mb-2">Messages</h1>
+          <h1 className="text-4xl mb-2">{t("title")}</h1>
           <p className="text-muted-foreground">Connect with your network</p>
         </div>
 
@@ -108,7 +111,7 @@ export default function MessagesPage() {
             <div className="p-4 border-b border-border">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                <Input placeholder="Search messages..." className="pl-10" />
+                <Input placeholder={t("searchMessages")} className="pl-10" />
               </div>
             </div>
             <div className="overflow-y-auto h-full">
@@ -160,7 +163,7 @@ export default function MessagesPage() {
                 <div>
                   <h3 className="font-semibold">{conversations[selectedChat].name}</h3>
                   <p className="text-xs text-muted-foreground">
-                    {conversations[selectedChat].online ? "Online" : "Offline"}
+                    {conversations[selectedChat].online ? tCommon("online") : tCommon("offline")}
                   </p>
                 </div>
               </div>
@@ -215,7 +218,7 @@ export default function MessagesPage() {
                 <Input
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Type a message..."
+                  placeholder={t("typeMessage")}
                   onKeyPress={(e) => e.key === "Enter" && handleSendMessage()}
                 />
                 <Button

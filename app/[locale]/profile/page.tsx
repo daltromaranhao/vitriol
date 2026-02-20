@@ -1,3 +1,4 @@
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Navbar } from "@/components/navbar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -5,7 +6,12 @@ import { Avatar } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Briefcase, Calendar, Users, CheckCircle, Mail, Phone } from "lucide-react";
 
-export default function ProfilePage() {
+export default async function ProfilePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations('profile');
+  const tCommon = await getTranslations('common');
+
   const profile = {
     name: "John Smith",
     profession: "Senior Business Development Manager",
@@ -48,15 +54,15 @@ export default function ProfilePage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4" />
-                    Member since {profile.memberSince}
+                    {t('memberSince')} {profile.memberSince}
                   </div>
                   <div className="flex items-center gap-2">
                     <Users className="w-4 h-4" />
-                    {profile.connections} connections
+                    {profile.connections} {t('connections')}
                   </div>
                 </div>
                 <div className="flex gap-3">
-                  <Button variant="accent">Edit Profile</Button>
+                  <Button variant="accent">{t('editProfile')}</Button>
                   <Button variant="outline">Share Profile</Button>
                 </div>
               </div>
@@ -69,7 +75,7 @@ export default function ProfilePage() {
           <div className="md:col-span-2 space-y-8">
             <Card>
               <CardHeader>
-                <CardTitle>About</CardTitle>
+                <CardTitle>{t('about')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">{profile.bio}</p>
@@ -78,7 +84,7 @@ export default function ProfilePage() {
 
             <Card>
               <CardHeader>
-                <CardTitle>Interests</CardTitle>
+                <CardTitle>{t('interests')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2">
@@ -91,7 +97,7 @@ export default function ProfilePage() {
 
             <Card>
               <CardHeader>
-                <CardTitle>Recent Activity</CardTitle>
+                <CardTitle>{t('activity')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -116,7 +122,7 @@ export default function ProfilePage() {
           <div className="space-y-6">
             <Card>
               <CardHeader>
-                <CardTitle>Contact Information</CardTitle>
+                <CardTitle>{t('contact')}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center gap-3">
@@ -144,7 +150,7 @@ export default function ProfilePage() {
                 <div className="flex items-center gap-3 mb-4">
                   <CheckCircle className="w-8 h-8 text-accent" />
                   <div>
-                    <p className="font-semibold">Verified Member</p>
+                    <p className="font-semibold">{t('verified')}</p>
                     <p className="text-xs text-muted-foreground">Identity confirmed</p>
                   </div>
                 </div>

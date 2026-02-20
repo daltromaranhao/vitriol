@@ -1,3 +1,4 @@
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Navbar } from "@/components/navbar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -6,8 +7,15 @@ import { Avatar } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Search, HeartHandshake, MapPin, Clock, MessageCircle } from "lucide-react";
 
-export default function HelpRequestsPage() {
-  const categories = ["All Categories", "Medical", "Professional", "Housing", "Travel", "Legal", "Other"];
+export default async function HelpRequestsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations('helpRequests');
+
+  const categories = [
+    t('categories.all'), t('categories.medical'), t('categories.professional'),
+    t('categories.housing'), t('categories.travel'), t('categories.legal'), t('categories.other'),
+  ];
 
   const helpRequests = [
     {
@@ -48,7 +56,7 @@ export default function HelpRequestsPage() {
 
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
-          <h1 className="text-4xl mb-2">Help Requests</h1>
+          <h1 className="text-4xl mb-2">{t('title')}</h1>
           <p className="text-muted-foreground">Global support network for members in need</p>
         </div>
 
@@ -66,7 +74,7 @@ export default function HelpRequestsPage() {
                   This ensures quality and prevents abuse of the system.
                 </p>
               </div>
-              <Button variant="accent">Create Help Request</Button>
+              <Button variant="accent">{t('createRequest')}</Button>
             </div>
           </CardContent>
         </Card>
@@ -122,9 +130,9 @@ export default function HelpRequestsPage() {
                 <div className="flex items-center justify-between pt-4 border-t border-border">
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <MessageCircle className="w-4 h-4" />
-                    <span>{request.responses} responses</span>
+                    <span>{request.responses} {t('responses')}</span>
                   </div>
-                  <Button variant="accent" size="sm">Offer Help</Button>
+                  <Button variant="accent" size="sm">{t('offerHelp')}</Button>
                 </div>
               </CardContent>
             </Card>

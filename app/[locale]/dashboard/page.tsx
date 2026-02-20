@@ -1,5 +1,6 @@
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Navbar } from "@/components/navbar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar } from "@/components/ui/avatar";
@@ -15,37 +16,41 @@ import {
   CheckCircle,
 } from "lucide-react";
 
-export default async function DashboardPage() {
+export default async function DashboardPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations('dashboard');
+  const tCommon = await getTranslations('common');
   const session = await auth();
 
   if (!session) {
-    redirect("/auth/login");
+    redirect(`/${locale}/auth/login`);
   }
 
   const stats = [
     {
-      title: "Total Connections",
+      title: t('stats.connections'),
       value: "48",
       change: "+12%",
       icon: Users,
       trend: "up",
     },
     {
-      title: "Network Reach",
+      title: t('stats.reach'),
       value: "23 Countries",
       change: "+3",
       icon: Globe,
       trend: "up",
     },
     {
-      title: "Active Conversations",
+      title: t('stats.conversations'),
       value: "8",
       change: "2 new",
       icon: MessageSquare,
       trend: "up",
     },
     {
-      title: "Profile Views",
+      title: t('stats.views'),
       value: "124",
       change: "+24%",
       icon: TrendingUp,
@@ -100,7 +105,7 @@ export default async function DashboardPage() {
         {/* Welcome Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-2">
-            Welcome back, {session.user?.name || "Guest"}
+            {t('welcome')}, {session.user?.name || "Guest"}
           </h1>
           <p className="text-muted-foreground">
             Here's your network activity
@@ -135,7 +140,7 @@ export default async function DashboardPage() {
           <div className="lg:col-span-2">
             <Card className="border-border/50">
               <CardHeader>
-                <CardTitle>Recent Activity</CardTitle>
+                <CardTitle>{t('feed')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -168,7 +173,7 @@ export default async function DashboardPage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <UserPlus className="w-5 h-5" />
-                  Suggested Connections
+                  {t('suggested')}
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -199,7 +204,7 @@ export default async function DashboardPage() {
                         </div>
                       </div>
                       <Button variant="outline" size="sm" className="w-full">
-                        Connect
+                        {tCommon('connect')}
                       </Button>
                     </div>
                   ))}

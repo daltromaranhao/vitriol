@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useTranslations } from 'next-intl';
 import { Navbar } from "@/components/navbar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -11,6 +12,7 @@ import { User, MapPin, Briefcase, Heart, ChevronRight, ChevronLeft } from "lucid
 import { cn } from "@/lib/utils";
 
 export default function OnboardingPage() {
+  const t = useTranslations('onboarding');
   const router = useRouter();
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
@@ -55,7 +57,7 @@ export default function OnboardingPage() {
         <Card className="w-full max-w-2xl">
           <CardHeader>
             <div className="flex items-center justify-between mb-4">
-              <CardTitle className="text-2xl">Complete Your Profile</CardTitle>
+              <CardTitle className="text-2xl">{t('title')}</CardTitle>
               <span className="text-sm text-muted-foreground">{step} / {totalSteps}</span>
             </div>
             <div className="w-full h-2 bg-muted rounded-full overflow-hidden">
@@ -75,14 +77,14 @@ export default function OnboardingPage() {
                     <User className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="text-xl">Basic Information</h3>
+                    <h3 className="text-xl">{t('step1')}</h3>
                     <p className="text-sm text-muted-foreground">Tell us about yourself</p>
                   </div>
                 </div>
 
                 <div className="space-y-4">
                   <div>
-                    <label className="text-sm mb-2 block">First Name</label>
+                    <label className="text-sm mb-2 block">{t('firstName')}</label>
                     <Input
                       value={formData.firstName}
                       onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
@@ -90,7 +92,7 @@ export default function OnboardingPage() {
                     />
                   </div>
                   <div>
-                    <label className="text-sm mb-2 block">Last Name</label>
+                    <label className="text-sm mb-2 block">{t('lastName')}</label>
                     <Input
                       value={formData.lastName}
                       onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
@@ -109,14 +111,14 @@ export default function OnboardingPage() {
                     <MapPin className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="text-xl">Location</h3>
+                    <h3 className="text-xl">{t('step2')}</h3>
                     <p className="text-sm text-muted-foreground">Where are you based?</p>
                   </div>
                 </div>
 
                 <div className="space-y-4">
                   <div>
-                    <label className="text-sm mb-2 block">Country</label>
+                    <label className="text-sm mb-2 block">{t('country')}</label>
                     <Input
                       value={formData.country}
                       onChange={(e) => setFormData({ ...formData, country: e.target.value })}
@@ -124,7 +126,7 @@ export default function OnboardingPage() {
                     />
                   </div>
                   <div>
-                    <label className="text-sm mb-2 block">City</label>
+                    <label className="text-sm mb-2 block">{t('city')}</label>
                     <Input
                       value={formData.city}
                       onChange={(e) => setFormData({ ...formData, city: e.target.value })}
@@ -143,14 +145,14 @@ export default function OnboardingPage() {
                     <Briefcase className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="text-xl">Professional Details</h3>
+                    <h3 className="text-xl">{t('step3')}</h3>
                     <p className="text-sm text-muted-foreground">What do you do?</p>
                   </div>
                 </div>
 
                 <div className="space-y-4">
                   <div>
-                    <label className="text-sm mb-2 block">Profession</label>
+                    <label className="text-sm mb-2 block">{t('profession')}</label>
                     <Input
                       value={formData.profession}
                       onChange={(e) => setFormData({ ...formData, profession: e.target.value })}
@@ -158,7 +160,7 @@ export default function OnboardingPage() {
                     />
                   </div>
                   <div>
-                    <label className="text-sm mb-2 block">Biography</label>
+                    <label className="text-sm mb-2 block">{t('bio')}</label>
                     <textarea
                       value={formData.bio}
                       onChange={(e) => setFormData({ ...formData, bio: e.target.value })}
@@ -178,7 +180,7 @@ export default function OnboardingPage() {
                     <Heart className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="text-xl">Interests</h3>
+                    <h3 className="text-xl">{t('step4')}</h3>
                     <p className="text-sm text-muted-foreground">What are you interested in?</p>
                   </div>
                 </div>
@@ -211,14 +213,14 @@ export default function OnboardingPage() {
                 className="gap-2"
               >
                 <ChevronLeft className="w-4 h-4" />
-                Previous
+                {t('previous')}
               </Button>
               <Button
                 variant="accent"
                 onClick={handleNext}
                 className="gap-2"
               >
-                {step === totalSteps ? "Complete" : "Next"}
+                {step === totalSteps ? t('finish') : t('next')}
                 <ChevronRight className="w-4 h-4" />
               </Button>
             </div>

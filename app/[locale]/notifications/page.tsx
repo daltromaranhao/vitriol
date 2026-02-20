@@ -1,3 +1,4 @@
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Navbar } from "@/components/navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar } from "@/components/ui/avatar";
@@ -5,7 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { UserPlus, MessageSquare, ThumbsUp, CheckCircle, Bell } from "lucide-react";
 
-export default function NotificationsPage() {
+export default async function NotificationsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("notifications");
   const notifications = [
     {
       id: 1,
@@ -61,10 +65,10 @@ export default function NotificationsPage() {
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8 flex items-center justify-between">
           <div>
-            <h1 className="text-4xl mb-2">Notifications</h1>
+            <h1 className="text-4xl mb-2">{t('title')}</h1>
             <p className="text-muted-foreground">Stay updated with your network activity</p>
           </div>
-          <Button variant="outline" size="sm">Mark All as Read</Button>
+          <Button variant="outline" size="sm">{t('markAllRead')}</Button>
         </div>
 
         <Card>
@@ -104,7 +108,7 @@ export default function NotificationsPage() {
           <Card>
             <CardContent className="p-12 text-center">
               <Bell className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
-              <h3 className="text-lg font-semibold mb-2">No notifications</h3>
+              <h3 className="text-lg font-semibold mb-2">{t('noNotifications')}</h3>
               <p className="text-muted-foreground">You're all caught up!</p>
             </CardContent>
           </Card>

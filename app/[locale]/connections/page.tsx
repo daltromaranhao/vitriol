@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Navbar } from "@/components/navbar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -10,6 +11,8 @@ import { UserPlus, UserCheck, Users, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function ConnectionsPage() {
+  const t = useTranslations("connections");
+  const tCommon = useTranslations("common");
   const [activeTab, setActiveTab] = useState<"connections" | "requests" | "suggestions">("connections");
 
   const myConnections = [
@@ -30,9 +33,9 @@ export default function ConnectionsPage() {
   ];
 
   const tabs = [
-    { id: "connections" as const, label: "My Connections", icon: Users, count: myConnections.length },
-    { id: "requests" as const, label: "Requests", icon: UserCheck, count: connectionRequests.length },
-    { id: "suggestions" as const, label: "Suggestions", icon: UserPlus, count: suggestions.length },
+    { id: "connections" as const, label: t("myConnections"), icon: Users, count: myConnections.length },
+    { id: "requests" as const, label: t("requests"), icon: UserCheck, count: connectionRequests.length },
+    { id: "suggestions" as const, label: t("suggestions"), icon: UserPlus, count: suggestions.length },
   ];
 
   return (
@@ -41,7 +44,7 @@ export default function ConnectionsPage() {
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
-          <h1 className="text-4xl mb-2">Connections</h1>
+          <h1 className="text-4xl mb-2">{t("title")}</h1>
           <p className="text-muted-foreground">Manage your professional network</p>
         </div>
 
@@ -87,7 +90,7 @@ export default function ConnectionsPage() {
                       </div>
                       <p className="text-xs text-muted-foreground">Connected {conn.connectedDate}</p>
                     </div>
-                    <Button variant="outline" size="sm">Message</Button>
+                    <Button variant="outline" size="sm">{tCommon("message")}</Button>
                   </div>
                 </CardContent>
               </Card>
@@ -110,12 +113,12 @@ export default function ConnectionsPage() {
                         <MapPin className="w-3 h-3" />
                         {req.location}
                       </div>
-                      <p className="text-xs text-muted-foreground mt-2">{req.mutualConnections} mutual connections</p>
+                      <p className="text-xs text-muted-foreground mt-2">{req.mutualConnections} {t("mutualConnections")}</p>
                     </div>
                   </div>
                   <div className="flex gap-2">
-                    <Button variant="accent" size="sm" className="flex-1">Accept</Button>
-                    <Button variant="outline" size="sm" className="flex-1">Decline</Button>
+                    <Button variant="accent" size="sm" className="flex-1">{t("accept")}</Button>
+                    <Button variant="outline" size="sm" className="flex-1">{t("decline")}</Button>
                   </div>
                 </CardContent>
               </Card>
@@ -139,10 +142,10 @@ export default function ConnectionsPage() {
                         {sug.location}
                       </div>
                       <Badge variant="secondary" className="text-xs mb-2">{sug.reason}</Badge>
-                      <p className="text-xs text-muted-foreground">{sug.mutualConnections} mutual connections</p>
+                      <p className="text-xs text-muted-foreground">{sug.mutualConnections} {t("mutualConnections")}</p>
                     </div>
                   </div>
-                  <Button variant="accent" size="sm" className="w-full">Connect</Button>
+                  <Button variant="accent" size="sm" className="w-full">{tCommon("connect")}</Button>
                 </CardContent>
               </Card>
             ))}
