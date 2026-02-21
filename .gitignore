@@ -55,3 +55,8 @@ next-env.d.ts
 # design files (reference only)
 /design-files
 *.zip
+
+# Apple OAuth credentials (NEVER commit!)
+APPLE_CREDENTIALS.txt
+scripts/AuthKey_*.p8
+*.p8

@@ -1,26 +1,135 @@
-# 🍎 Apple Sign In - Passo a Passo Completo
+# 🍎 Apple Sign In - Guia Ultra Detalhado
 
-**Tempo estimado:** 20 minutos  
-**Custo:** Apple Developer Account ($99/ano)
-
----
-
-## 📋 PRÉ-REQUISITOS
-
-✅ Apple Developer Account ativo ($99/ano)  
-✅ Acesso ao [Apple Developer Portal](https://developer.apple.com/account)  
-✅ Node.js instalado (para gerar o Client Secret)
+**Tempo estimado:** 20-30 minutos  
+**Custo:** Apple Developer Account ($99/ano)  
+**Dificuldade:** Média
 
 ---
 
-## PASSO 1: Acessar Apple Developer Console
+## 📋 O QUE VOCÊ VAI PRECISAR
 
-1. Acesse: https://developer.apple.com/account
-2. Faça login com sua Apple ID
-3. Aceite os termos se solicitado
-4. Você deve ver o dashboard do Developer Account
+Antes de começar, tenha em mãos:
 
-**🔍 Verificação:** Você está na tela "Certificates, Identifiers & Profiles"?
+✅ **Apple Developer Account ativo** ($99/ano)
+   - Se não tem: https://developer.apple.com/programs/enroll/
+   - Processo de aprovação pode levar 24-48h
+
+✅ **Acesso ao computador** (Mac, Windows ou Linux)
+
+✅ **Node.js instalado** (para rodar o script de geração)
+   - Verificar: `node --version` (deve mostrar v18 ou superior)
+
+✅ **Git instalado e repositório clonado**
+   ```bash
+   git clone https://github.com/daltromaranhao/vitriol.git
+   cd vitriol
+   ```
+
+✅ **Um bloco de notas** para anotar:
+   - Team ID
+   - Key ID  
+   - Client ID
+
+---
+
+## 🎯 O QUE VAMOS FAZER
+
+Vamos criar 3 componentes no Apple Developer:
+
+1. **App ID** - Identifica seu aplicativo iOS/Mac
+2. **Services ID** - Identifica seu serviço web (CLIENT_ID)
+3. **Private Key** - Assina o token JWT (para gerar CLIENT_SECRET)
+
+Depois vamos gerar o Client Secret e configurar no Vercel.
+
+---
+
+## 🚀 COMEÇANDO - PASSO 0: Acessar Apple Developer
+
+### 0.1 - Abrir o navegador
+
+1. Abra seu navegador preferido (Chrome, Safari, Firefox, Edge)
+2. Digite na barra de endereço:
+   ```
+   https://developer.apple.com/account
+   ```
+3. Pressione Enter
+
+### 0.2 - Fazer Login
+
+**Tela que você verá:**
+```
+┌─────────────────────────────────────────┐
+│         🍎 Apple Developer              │
+│                                         │
+│   Sign in with your Apple ID            │
+│                                         │
+│   [  Email ou telefone  ]               │
+│   [  ____________      ]                │
+│                                         │
+│   [      Continuar      ]               │
+│                                         │
+└─────────────────────────────────────────┘
+```
+
+**O que fazer:**
+1. Digite seu **Apple ID** (email) no campo
+2. Clique no botão **"Continuar"** (azul)
+3. Digite sua **senha**
+4. Se tiver autenticação de dois fatores (2FA):
+   - Verifique seu iPhone/iPad/Mac
+   - Digite o código de 6 dígitos
+   - Clique **"Confiar"** se perguntado
+
+### 0.3 - Aceitar Termos (se solicitado)
+
+Se for seu primeiro acesso ou houve atualização nos termos:
+
+```
+┌─────────────────────────────────────────┐
+│  Apple Developer Program License        │
+│  Agreement                              │
+│                                         │
+│  [texto do contrato...]                 │
+│                                         │
+│  [ ] I have read and agree to be       │
+│      bound by the Apple Developer      │
+│      Program License Agreement         │
+│                                         │
+│  [  Cancel  ]  [  Submit  ]            │
+└─────────────────────────────────────────┘
+```
+
+**O que fazer:**
+1. ✅ Marque a checkbox
+2. Clique **"Submit"**
+
+### 0.4 - Navegar para Certificates, Identifiers & Profiles
+
+**Dashboard inicial:**
+```
+┌──────────────────────────────────────────────┐
+│  🍎 Apple Developer                          │
+│  ┌────────────┬────────────┬──────────────┐ │
+│  │ Overview   │ Membership │ Certificates │ │
+│  └────────────┴────────────┴──────────────┘ │
+│                                              │
+│  Account:  [Seu Nome]                        │
+│  Role:     [Agent/Admin]                     │
+│                                              │
+│  Quick Links:                                │
+│  • Certificates, Identifiers & Profiles  ←── │
+│  • App Store Connect                         │
+│  • Forums                                    │
+└──────────────────────────────────────────────┘
+```
+
+**O que fazer:**
+1. Procure no menu lateral esquerdo: **"Certificates, Identifiers & Profiles"**
+2. Clique nele
+3. Ou clique no link azul em "Quick Links"
+
+**✅ Pronto! Você está na tela correta para começar!**
 
 ---
 
