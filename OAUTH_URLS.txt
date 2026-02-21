@@ -1,0 +1,74 @@
+════════════════════════════════════════════════════════════════════════════════
+                     🔐 VITRIOL - OAUTH REDIRECT URLS
+════════════════════════════════════════════════════════════════════════════════
+
+📋 COPIE E COLE ESTAS URLs EXATAS NOS CONSOLES
+
+
+🔵 GOOGLE CLOUD CONSOLE
+────────────────────────────────────────────────────────────────────────────────
+Local: APIs & Services → Credentials → OAuth Client → Authorized redirect URIs
+
+✅ Authorized Redirect URIs (adicione todas):
+
+http://localhost:3000/api/auth/callback/google
+https://vitriol.io/api/auth/callback/google
+https://www.vitriol.io/api/auth/callback/google
+https://vitriol.global/api/auth/callback/google
+https://www.vitriol.global/api/auth/callback/google
+
+
+✅ Authorized JavaScript Origins (adicione todas):
+
+http://localhost:3000
+https://vitriol.io
+https://www.vitriol.io
+https://vitriol.global
+https://www.vitriol.global
+
+
+🍎 APPLE DEVELOPER CONSOLE
+────────────────────────────────────────────────────────────────────────────────
+Local: Certificates, Identifiers & Profiles → Services ID → Configure
+
+✅ Domains and Subdomains (adicione todos):
+
+localhost
+vitriol.io
+www.vitriol.io
+vitriol.global
+www.vitriol.global
+
+
+✅ Return URLs (adicione todas):
+
+http://localhost:3000/api/auth/callback/apple
+https://vitriol.io/api/auth/callback/apple
+https://www.vitriol.io/api/auth/callback/apple
+https://vitriol.global/api/auth/callback/apple
+https://www.vitriol.global/api/auth/callback/apple
+
+
+⚙️ ENVIRONMENT VARIABLES (VERCEL)
+────────────────────────────────────────────────────────────────────────────────
+
+Para vitriol.io:
+NEXTAUTH_URL=https://vitriol.io
+
+Para vitriol.global:
+NEXTAUTH_URL=https://vitriol.global
+
+Para localhost:
+NEXTAUTH_URL=http://localhost:3000
+
+
+📝 NOTAS IMPORTANTES
+────────────────────────────────────────────────────────────────────────────────
+
+✓ URLs devem ser EXATAMENTE iguais (sem / no final)
+✓ HTTP só funciona para localhost
+✓ HTTPS obrigatório em produção
+✓ Mudanças no Google: ~5 minutos
+✓ Mudanças na Apple: pode levar 24h
+
+════════════════════════════════════════════════════════════════════════════════
