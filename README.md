@@ -53,7 +53,10 @@ cp .env.example .env
 Edit `.env` and add your configuration:
 - `DATABASE_URL`: Your PostgreSQL connection string
 - `NEXTAUTH_SECRET`: Generate with \`openssl rand -base64 32\`
+- `NEXTAUTH_URL`: Your app URL (e.g., http://localhost:3000)
 - OAuth credentials (optional): Google, Apple
+
+**📘 For detailed OAuth setup instructions, see [docs/OAUTH_SETUP.md](docs/OAUTH_SETUP.md)**
 
 4. Set up the database:
 \`\`\`bash
@@ -80,6 +83,19 @@ Open [http://localhost:3000](http://localhost:3000) to see the application.
 - `npm run db:push` - Push Prisma schema to database
 - `npm run db:seed` - Seed database with demo data
 - `npm run db:studio` - Open Prisma Studio
+
+## OAuth Configuration
+
+The app supports Google and Apple OAuth authentication. To set it up:
+
+1. **Google OAuth**: Follow the guide in [docs/OAUTH_SETUP.md](docs/OAUTH_SETUP.md#-google-oauth-setup)
+2. **Apple Sign In**: Follow the guide in [docs/OAUTH_SETUP.md](docs/OAUTH_SETUP.md#-apple-sign-in-setup)
+3. **Generate Apple Secret**: Use the helper script:
+   ```bash
+   node scripts/generate-apple-secret.js
+   ```
+
+See the complete [OAuth Setup Guide](docs/OAUTH_SETUP.md) for detailed instructions.
 
 ## Project Structure
 

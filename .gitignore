@@ -37,6 +37,11 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
+# Apple OAuth private keys (NEVER commit these!)
+*.p8
+AuthKey_*.p8
+scripts/AuthKey_*.p8
+
 # vercel
 .vercel
 
