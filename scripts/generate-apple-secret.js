@@ -25,16 +25,16 @@ const path = require('path');
 
 const CONFIG = {
   // Your Apple Team ID (found in Apple Developer Account membership)
-  TEAM_ID: 'YOUR_TEAM_ID_HERE',
+  TEAM_ID: 'CAV7VQN4C5',
   
   // Your Services ID (e.g., com.vitriol.web)
-  CLIENT_ID: 'com.vitriol.web',
+  CLIENT_ID: 'io.vitriol.web',
   
   // Your Key ID (shown when you created the key)
-  KEY_ID: 'YOUR_KEY_ID_HERE',
+  KEY_ID: 'NSR5UL4YJ5',
   
   // Path to your .p8 private key file
-  KEY_FILE: path.join(__dirname, 'AuthKey_XXXXXXXXXX.p8'),
+  KEY_FILE: path.join(__dirname, 'AuthKey_NSR5UL4YJ5.p8'),
   
   // Token validity in days (max 6 months = 180 days)
   VALIDITY_DAYS: 180,
