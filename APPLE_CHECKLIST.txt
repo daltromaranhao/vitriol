@@ -1,0 +1,164 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║              🍎 APPLE SIGN IN - CHECKLIST PASSO A PASSO                    ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+📱 PRÉ-REQUISITO: Apple Developer Account ($99/ano)
+   https://developer.apple.com/account
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PASSO 1: CRIAR APP ID
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Local: Certificates, Identifiers & Profiles → Identifiers → (+)
+
+[ ] Selecionar "App IDs" → Continue
+[ ] Selecionar "App" → Continue
+[ ] Description: Vitriol
+[ ] Bundle ID: io.vitriol.app
+[ ] Marcar: ✅ Sign in with Apple
+[ ] Continue → Register
+
+✅ App ID criado!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PASSO 2: CRIAR SERVICES ID (CLIENT ID)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Local: Identifiers → (+) → Services IDs
+
+[ ] Description: Vitriol Web
+[ ] Identifier: io.vitriol.web  ⚠️ ESTE É SEU APPLE_CLIENT_ID
+[ ] Marcar: ✅ Sign in with Apple
+[ ] Clicar "Configure"
+
+    CONFIGURAR DOMÍNIOS:
+    [ ] Primary App ID: Vitriol (selecionar o App ID do Passo 1)
+    
+    [ ] Adicionar Domains:
+        localhost
+        vitriol.io
+        www.vitriol.io
+        vitriol.global
+        www.vitriol.global
+    
+    [ ] Adicionar Return URLs:
+        http://localhost:3000/api/auth/callback/apple
+        https://vitriol.io/api/auth/callback/apple
+        https://www.vitriol.io/api/auth/callback/apple
+        https://vitriol.global/api/auth/callback/apple
+        https://www.vitriol.global/api/auth/callback/apple
+
+[ ] Next → Done → Continue → Register
+
+✅ Services ID criado!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PASSO 3: CRIAR PRIVATE KEY (.p8)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Local: Keys → (+)
+
+[ ] Key Name: Vitriol Sign In Key
+[ ] Marcar: ✅ Sign in with Apple
+[ ] Clicar "Configure" → Selecionar "Vitriol" → Save
+[ ] Continue → Register
+
+⚠️ CRÍTICO - FAÇA AGORA (só pode baixar 1 vez!):
+
+[ ] Copiar e salvar KEY ID: ______________________
+
+[ ] Clicar "Download" → Salvar arquivo AuthKey_XXXXXXXXXX.p8
+
+[ ] Mover arquivo para pasta do projeto:
+    mv ~/Downloads/AuthKey_*.p8 scripts/
+
+✅ Private Key baixada!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PASSO 4: OBTER TEAM ID
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Local: Menu superior → View Membership
+Ou: https://developer.apple.com/account/#!/membership
+
+[ ] Copiar TEAM ID: ______________________
+
+✅ Team ID copiado!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PASSO 5: GERAR CLIENT SECRET
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[ ] Editar: scripts/generate-apple-secret.js
+
+    Atualizar CONFIG:
+    TEAM_ID: 'SEU_TEAM_ID_AQUI'
+    CLIENT_ID: 'io.vitriol.web'
+    KEY_ID: 'SEU_KEY_ID_AQUI'
+    KEY_FILE: path.join(__dirname, 'AuthKey_XXXXXXXXXX.p8')
+
+[ ] Executar script:
+    node scripts/generate-apple-secret.js
+
+[ ] Copiar APPLE_CLIENT_SECRET gerado (token JWT longo)
+
+✅ Client Secret gerado!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PASSO 6: CONFIGURAR VERCEL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Vercel → Projeto → Settings → Environment Variables
+
+PARA VITRIOL.IO:
+[ ] APPLE_CLIENT_ID = io.vitriol.web
+[ ] APPLE_CLIENT_SECRET = (colar o JWT do Passo 5)
+[ ] NEXTAUTH_URL = https://vitriol.io
+[ ] NEXTAUTH_SECRET = (gerar: openssl rand -base64 32)
+
+PARA VITRIOL.GLOBAL:
+[ ] APPLE_CLIENT_ID = io.vitriol.web
+[ ] APPLE_CLIENT_SECRET = (colar o JWT do Passo 5)
+[ ] NEXTAUTH_URL = https://vitriol.global
+[ ] NEXTAUTH_SECRET = (gerar: openssl rand -base64 32)
+
+[ ] Save → Redeploy
+
+✅ Environment variables configuradas!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PASSO 7: TESTAR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[ ] Visitar: https://vitriol.io/auth/login
+[ ] Clicar em "Continue with Apple"
+[ ] Fazer login com Apple ID
+[ ] Autorizar o app
+[ ] Verificar redirect para /dashboard ou /onboarding
+[ ] Verificar usuário criado no banco (npx prisma studio)
+
+✅ Apple Sign In funcionando!
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📝 INFORMAÇÕES IMPORTANTES:
+
+TEAM ID: ______________________
+KEY ID:  ______________________
+CLIENT ID: io.vitriol.web
+
+⚠️ LEMBRETE: Client Secret expira em 6 meses!
+   Adicionar no calendário: regenerar antes de ___ / ___ / ___
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📚 GUIA COMPLETO: docs/APPLE_STEP_BY_STEP.md
+
